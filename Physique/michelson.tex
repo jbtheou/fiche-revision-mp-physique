@@ -1,0 +1,118 @@
+\chapter{Interféromètre de Michelson}
+\section{L'interféromètre}
+\subsection{Description}
+Considérons deux mirroirs, notés $M_1$ et $M_2$, et une lame semi réfléchissant, formant un angle de 45 degrée avec l'horizontale. Notons :
+$$e = OM_2 - OM_1$$
+Avec ce système, on obtient des interférences, car la lumière émise d'une source ne met pas le même temps pour aller de la source au plan.\\
+Considérons deux voies : 
+\begin{itemize}
+ \item[$\rightarrow$] Voie 1 : Réflexion sur la séparatrice, puis réflexion sur $M_1$
+ \item[$\rightarrow$] Voie 2 : Réflexion sur $M_2$, puis réflexion sur la séparatrice
+\end{itemize}
+\subsection{Cas de la source ponctuelle}
+\subsubsection{Tracé de rayon}
+\paragraph{A partir d'un point source}
+Considérons donné une source ponctuelle, noté O, et l'ensemble $M_1$, $M_2$ et la lame semi-réfléchisante. $M_1$ à pour coordoonée (0,Y) et $M_2$ à pour coordonnée (X,0). Notons $\alpha$ l'angle entre l'horizontale et le mirroir $M_1$. On obtient le tracé des rayons pour la voie 1 et 2 en déterminant les images par les différents systèmes obtique. On obtient le tracé des rayons arrivant au point P, un point de l'écran.
+\paragraph{A partir d'un point de l'écran}
+Inversement, on peut, étant donnée le dispositif et un point de l'écran, tracé les rayons de la voie 1 et de la voie 2, provenant d'une source quelconque.
+\subsubsection{Image de $M_2$}
+On peut aussi, à partir du premier tracé, celui d'un point source, obtenir un schéma équivalent, ne portant que sur un axe du repère. Ce montage est virtuel, mais rigoureusement équivalent. Si $\alpha = 0$, on dit que le Michelson est en "lame d'air", c'est à dire que le mirroir $M_1$ et $M_2$ sont parralèle tout les deux à l'axe 0x. Si $\alpha \neq 0$, on dit que le Michelson est en "coin d'air"
+\subsection{Les différents cas}
+\begin{itemize}
+ \item[$\rightarrow$] Disposition des mirroirs. Ceci dépend de deux paramètres : $\alpha$ et e.
+\begin{itemize}
+ \item[$\rightarrow$] $\alpha = 0$ : Lame d'air
+ \item[$\rightarrow$] $\alpha \neq 0$ : Coin d'air
+\end{itemize}
+ \item[$\rightarrow$] Sources. On peut considérer plusieurs types de sources
+\begin{itemize}
+ \item[$\rightarrow$] Sources ponctuelles : Assimilable à un point
+ \item[$\rightarrow$] Sources étendue
+ \item[$\rightarrow$] Sources à distance finie
+ \item[$\rightarrow$] Sources à l'infini
+\end{itemize}
+\end{itemize}
+\subsubsection{Cas d'une source ponctuelle}
+Dans le cas d'une source ponctuelle, on obtient que les deux sources virtuel sont syncrone, notée $O_1$, $O_2$, on obtient donc que, en faisant l'hypothèse que $O_1M \backsimeq O_2M$.\\
+$$E(M) = K.[1 + cos(\dfrac{2.\pi}{\lambda}(O_2M-O_1M))]$$
+Les lieux d'éclairement constant sont des hyperbolïdes de révolution.
+\subsection{Michelson en "lame d'air"}
+Nous avons donc $\alpha = 0$. On obtient donc que $0_1$ et $0_2$ vont être sur l'axe.
+\subsubsection{Source ponctuelle à distance finie}
+Soit P un point de l'écran de coordoonée (r,Y). Soit D la distance entre l'écran et $O_1$, et $\theta$ l'angle entre $0_1P$ et la vertical, et 2.e la distance entre $O_1$ et $O_2$.\\
+On suppose : 
+$$r \ll D$$
+On obtient, en développant que : 
+$$E(M) = K[1 + cos(\dfrac{2.\pi}{\lambda}.2.e.cos(\theta))]$$
+\subsubsection{Description de la figure d'interférence}
+Considérons les franges brillantes : 
+On obtient que : 
+$$cos(\theta) = \dfrac{p.\lambda}{2.e}$$
+En général, on a : 
+$$\lambda \ll e$$
+Soit $r_k$ le rayon du k-ème anneau. On obtient, en considérant l'angle $\theta_k$ petit, que : 
+$$\dfrac{r_k}{D} = \sqrt{\dfrac{\lambda}{e}}\sqrt{k+\varepsilon-1}$$
+On ne peut pas déduit grand chose de cette expression, consernant l'évolution de $r_k$ avec e, car le $\varepsilon$ dépend de e. On montre cependant, en repartant de l'équation initiale, que si e augement, le rayon augmente.
+\subsection{Sources étendue}
+\subsubsection{Élargissement de la source}
+Au lieu d'avoir un point sources, noté O, on obtient en ensemble de point source. Soit S un autre point source appartenant à la source étendue. On obtient que la figure d'interférence dû à S est translaté par rapport à celle de O. Notons a la distance entre les deux centres des anneau d'interférences. On obtient une condition sur la largeur de la source, pour pouvoir continuer des interférences. Il faut que : 
+$$a < r_{k+1-r_k}$$
+En développant, en se placant dans le cas ou $\varepsilon = 1$ et $k \gg 1$, on obtient que a doit vérifier : 
+$$a < D.\sqrt{\dfrac{\lambda}{2}}.\dfrac{1}{2.\sqrt{k}}$$
+Soit N le nombre d'anneau visible. On obtient que : 
+$$\sqrt{N} = \dfrac{D}{2}\sqrt{\dfrac{\lambda}{e}}.\dfrac{1}{a}$$
+On obtient donc que N est bornée, sauf si D $\rightarrow \infty$. En se placant à l'inifi, on observera un très grand nombre d'anneaux. Ceci peut etre réalisé à l'aide d'une lentille. Dans ce cas de figure, on obtient pour l'éclairement, en un point de l'écran M : 
+$$E(M) = K.[1 + cos(\dfrac{2\pi}{\lambda}.2ecos(\theta))]$$
+On peut donc se librer de la cohérence spatiale dans le cas d'une source étendue à l'infini.
+\subsubsection{Cohérence temporelle}
+On ne peut, en pratique, obtenir une source monochromatique. En développant, on montre que les anneaux d'interférence vont allez en s'epaissisant. On n'observe donc que les anneaux au centre, ceux à la périphérie ne sont pas visible.
+\subsection{Anneau de Haidinger}
+Considérons deux lames cristallin, toutes deux parralèles, séparé d'une distance e. Considérons un rayon incident. Une partie de ce rayon se réfléchi, l'autre prénètre dans les deux lames. Et ainsi de suite pour toute les interfaces. On montre, en développant à l'aide de considération d'optique ondulatoire, que les rayons utilisable, c'est à dire ayant une énergie non négligable devant le rayon incident, se trouve au tout début du processus. Les autres "s'épuissent" très vite.
+\subsubsection{Calcul du déphasage}
+Considérons une interface entre deux milieux 1 et 2. Un rayon incident, provenant de 1, passe dans 2, puis se réfléchi sur la deuxième lame, pour enfin revenir dans le milieu 1, en traversant la première lame. Lors du passage de la première interface, une partie du rayon est aussi réfléchi. On obtient donc deux rayons qui peuvent interférer. On montre, à l'aide de considération géométrique, que le $\delta t$ entre les deux chemins s'exprime de la façon suivante : 
+$$\delta t = \dfrac{2.e.n_2}{c}.cos(r)$$
+Avec e la distance entre les deux lames, $n_2$ l'indice entre les lames, et r l'angle de réfraction du rayon incident.
+\section{Localisation des franges d'interférence}
+\subsection{Dans le cas d'une source ponctuelle}
+On obtient, en utilisant le schéma équivalent, que les interférences sont non localisés, c'est à dire que l'on peut placer l'écran ou l'on veux, on observera des interférences.
+\subsection{Dans le cas d'une source étendue}
+Avec un Michelson en lame d'air, on obtient que la localisation est à l'infini.
+\section{Michelson en "coin d'air"}
+\begin{de}
+Un Michelson est dit en coin d'air si :
+$$\alpha \neq 0$$
+\end{de}
+\subsubsection{Cas d'une source ponctuelle}
+Considérons une source ponctuelle. On obtient que les franches d'interférence sont non localisé.
+\subsubsection{Cas d'une source étendue}
+Considérons une source étendue. Dans ce cas, nous avons localisation des franges d'interférence sur une sphère, défini comme passant par les deux points $O_1$ et $O_2$, et par l'intersection virtuel des deux mirroirs. Pour le moment, les images des interférences sont virtuel. Pour les voir, on utilise une lentille à la sortie du Michelson.\\
+La nature des franges dépend de la distance de la source. En générale, on obtient des anneaux. Si d tend vers l'infini, on obtient des lignes. Pour faire tendre d vers l'infini, on place la source du Michelson dans le plan focale d'une lentille.
+\subsection{Etude du cas d'une source étendue, à l'infini}
+Comme nous l'avons vu, nous avons la localisation sur une sphère. Mais dans le cas ou d tend vers l'infini, on obtient que cette sphère est un plan. On obtient donc une image sur $M_1$. Soit P un point de $M_1$.\\
+Dans ce cas, en considérant que $\alpha$ est petit, on obtient que l'éclairement a pour expression :
+$$E(P) = K[1 + cos(\dfrac{2.\pi}{\lambda}.2.\alpha.x)]$$
+\subsection{Elargissement de la source}
+Dans ce cas, on peut considérer un autre point source (appartenant à la largeur de la source), noté S. La source étant à l'infini, les rayons sont parralèle. Cependant, ils sont incliné d'un angle $\beta$ par rapport à la normale. On obtient donc une expression différente pour la différence de marche. D'ou : 
+$$O \rightarrow E_O(P) = K[1 + cos(\dfrac{2.\pi}{\lambda}.2.\alpha.x)]$$
+$$S \rightarrow E_S(P) = K[1 + cos(\dfrac{2.\pi}{\lambda}.2.\alpha.x.cos(\beta))]$$
+On obtient donc que les franges vont en s'élargissant quand on se décale vers la périphérie. On observe donc pas les franges périphérique. D'autre part, le centre de la figure n'est pas, à priori, dans le champs d'observation. On n'observe donc pas de figure d'interférence. Pour en observer, il faut tendre vers le contact optique, c'est à dire faire tendre $e \rightarrow 0$.\\
+En résumé, nous avons ceci : 
+\begin{itemize}
+ \item[$\rightarrow$] Source ponctuelle : La source à l'infini $\rightarrow$ Franges rectiligne
+ \item[$\rightarrow$] Source étendue : La source à l'infini et le contact optique $\rightarrow$ Franges rectiligne.
+\end{itemize}
+De plus, on peut déterminer, en fixant $\alpha$ et e, une taille maximale pour la source.
+\subsection{Source non strictement monochromatique}
+On ne peut, dans la réalité, obtenir une source parfaitement monochromatique. On obtient donc : 
+$$E_{\lambda_1}(P) = K.[1 + cos(\dfrac{2.\pi}{\lambda_1}(2e - 2\alpha.x))]$$
+$$E_{\lambda_2}(P) = K.[1 + cos(\dfrac{2.\pi}{\lambda_2}(2e - 2\alpha.x))]$$
+On obtient donc que les franges d'interférence vont en s'épaissant. Il faut donc encore le contact optique.
+\section{Franges de Fizeau, ou d'égale épaisseur}
+On considère ici une lame mince. On considère donc ici un milieu transparent, de faible epaisseur, cette épaisseur étant variable sur la surface. On montre que la couleur dépend de l'épaisseur de la lame mince. Soit i l'angle d'incidence du rayon lumineux dans la lame mince. On montre que l'éclairement à pour expression : 
+$$E = K[1 + cos(\dfrac{2.\pi}{\lambda}.2.e.cos(i))]$$
+On observe donc que l'éclairement est maximal pour certaine longeurs d'onde. Ceci est observable sur un flaque d'eau avec un peu d'huile. L'huile fait office de la lame mince. On obtient une irisation, qui dépend de l'angle selon lequel on observe la flaque.
+\section{Interféromètre réel}
+Dans le cas d'un interféromètre réel, la séparatrice n'est pas un plan. On place donc une compensatrice dans le montage, pour corriger le retard du à l'épaisseur de la séparatrice.
+\subsection{Déphasage}
+On montre, qu'à la réflexion, de par les différents indices, et le fait que les réfractions ne se font pas toutes sur les mêmes interfaces, on obtient un déphasage. On obtient donc que l'expression réel de l'éclairement du Michelson est : 
+$$E = K[1 + cos(\dfrac{2.\pi}{\lambda}.2.e.cos(\theta) + \pi)]$$

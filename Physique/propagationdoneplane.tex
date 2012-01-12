@@ -1,0 +1,103 @@
+\chapter{Propagation d'une onde plane électromagnétique progressive monochromatique dans un milieu matériel}
+\section{Plasma}
+\subsection{Position du problème}
+\begin{de}
+Un plasma est un milieu totalement ionisé. On considère cet état comme le quatrième état de la matière. C'est un milieu électriquement neutre.
+\end{de}
+Considérons une onde monochromatique : 
+$$\overrightarrow{E} = E_0.cos(wt-kx)\overrightarrow{u_y}$$
+\subsection{Expression de j}
+Par application du P.F.D. sur un électron du plasma, qui n'est soumis qu'à la force de Lorentz. On obtient, en développement une expression de j : 
+$$\underline{\overrightarrow{j}} = \dfrac{-i.e^2.n_0}{m_e.\omega}\overrightarrow{E}$$
+Avec :
+\begin{itemize}
+ \item[$\rightarrow$] $n_0$ : Nombre d'électrons par unité de volume
+ \item[$\rightarrow$] $m_e$ : Masse de l'électron
+ \item[$\rightarrow$] $\omega$ : Pulsation du champs électrique
+\end{itemize}
+On ne considère que la masse de l'électron car la partie de $\underline{\overrightarrow{j}}$ du au cation est négligable par rapport à celle dù aux électrons.
+\subsection{Équation de Maxwell}
+En utilisant les équations de Maxwell liant $\overrightarrow{E}$ et $\overrightarrow{B}$, c'est à dire les rotationnels, on obtient l'expression suivante pour le nombre d'onde : 
+$$k^2 = \dfrac{\omega^2 - \omega_c^2}{c^2}$$
+Avec : 
+$$\omega_c^2 = \dfrac{\mu_0.n_0.c^2.e^2}{m_e}$$
+$\omega_c$ est appelé pulsation de coupure. On défini aussi la fréquence de coupure par : 
+$$f_c = \dfrac{w_c}{2.\pi} = \dfrac{1}{2.\pi} \dfrac{\sqrt{\mu_0.n_0.e^2.c^2}}{m_e}$$
+On obtient une fréquence de coupure de l'ordre du Mhz
+\subsection{Étude des diverses solutions}
+\subsubsection{Si $\omega > \omega_c$}
+Dans ce cas, nous avons : 
+$$k = \dfrac{\sqrt{\omega^2 - \omega_c^2}}{c}$$
+En utilisant l'expression du rotationnel de $\overrightarrow{E}$, on obtient que : 
+$$\overrightarrow{B} = \dfrac{\overrightarrow{u_x}\wedge\overrightarrow{E}}{\dfrac{\omega}{k}}$$
+On obtient dans ce cas une expression de $\overrightarrow{B}$ proche de celle déterminé dans le chapitre précédent, sauf que la vitesse est n'est pas la vitesse de la lumière, mais la vitesse de phase, que nous définir plus tard.\\
+On obtient que l'expression du champs dans le plasma est donnée par : 
+$$\overrightarrow{E} = E_0.e^{\dfrac{-x}{\delta}}.cos(\omega.t)\overrightarrow{u_y}$$
+avec : 
+$$\delta = \dfrac{c}{\sqrt{\omega_c^2 - \omega^2}}$$
+\subsubsection{Si $\omega_c > \omega_c$}
+Dans ce cas, on obtient pour le nombre d'onde : 
+$$k = \pm i \dfrac{\sqrt{\omega_c - \omega}}{c}$$
+En développant, on obtient que l'onde ne rentre pas dans le plasma, mais qu'elle est totalement réflechi. Comme application de celà, nous avons par exemple le fait que les ondes FM sont des ondes de courtes portées (de l'ordre du MHz), car elles ne se réfléchissent pas dans la ionosphère ( qui est assimilable à un plasma), alors que les ondes longues (de l'ordre du KHz) s'il réflechissent, ce qui permet une plus grande propagation.
+\section{Vitesse de phase - Vitesse de groupe}
+\subsection{Vitesse de phase}
+On considère le cas ou : 
+$$\omega > \omega_c$$
+Nous avons : 
+$$\overrightarrow{E} = E_0.cos(\omega(t - \dfrac{x}{(\dfrac{\omega}{k})}))\overrightarrow{u_y}$$
+On obtient donc que l'onde se propage à la vitesse $\dfrac{\omega}{k}$. Cette vitesse est appelé vitesse de phases. En développant, on obtient que : 
+$$v_{\varphi} = \dfrac{c}{\sqrt{1 - \dfrac{\omega_c^2}{\omega^2}}}$$
+On obtient donc que :
+$$v_{\varphi} > c$$
+Ceci semble surprenant car la relativité restreint montre qu'aucun objet ou énergie ne peut se déplacer plus rapidement que la vitesse. Cependant, la vitesse de phase ne rentre pas dans ces catégorie car c'est la vitesse de déplacement d'un champs, et non d'une énergie. Cependant, nous ne pouvons pas mettre en évidance ce champs car il est dépourvu d'énergie. Car nous allons le voir, l'énergie se déplace à une vitesse inferieur à la vitesse de la lumière, se qui est en accord avec la relativité restreinte d'Einstein.\\
+\subsection{Vitesse de groupe}
+En développant le vecteur de Poyting, on montre que l'énergie se déplace à une vitesse $v_g$ appelé vitesse de groupe. Nous avons : 
+$$v_g < c$$
+\subsection{Vitesse de deplacement d'un signal}
+Pour déterminer la vitesse de déplacement d'un signal, considérons une solution de l'équation de propagation non monochromatique, c'est a dire que la signal ne possède pas une fréquence, mais un spectre très réduit centré autour de cette fréquence $\omega_0$. On écrit cette solution sous la forme : 
+$$\underline{f(x,t)} = \int_0^{\infty} \dfrac{1}{\sqrt{2\pi}} g(\omega).e^{i(\omega.t-k.x)}d\omega $$
+On montre que k n'est plus égal à $f(\omega)$, mais on peut éffectuer un développement limité de k : 
+$$k \backsimeq k_0 + (\omega - \omega_0)\dfrac{\partial k}{\partial \omega}_{\omega_0}$$ 
+On obtient d'après l'expression de la solution que f est un produit que l'intégrale d'une onde se déplacement avec la vitesse de phases et d'une intégrale d'une onde qui se déplace à la vitesse de groupe.\\
+Considérons le cas ou : 
+$$w > w_c$$
+On montre que si :
+$$\dfrac{\omega}{k} = c$$
+Alors l'onde rentre totalement dans le milieu. Sinon, il y a une partie de l'onde qui est réfléchi. En utilisant les relations de continuité de l'énergie, on obtient les relation suivante :
+$$E_0' = \dfrac{2.E_{0i}}{1 + \dfrac{c}{v_{\phi}}}$$
+$$\left(\dfrac{E_{0r}}{E_{0i}}\right)^2 = \left(\dfrac{\dfrac{c}{v_{\varphi}} - 1}{\dfrac{c}{v_{\varphi}} + 1}\right)^2$$
+Avec : 
+\begin{itemize}
+ \item[$\rightarrow$] $E_0'$ l'énergie de l'onde qui rentre dans le plasma
+ \item[$\rightarrow$] $E_{0r}$ l'énergie de l'onde réflechie
+ \item[$\rightarrow$] $E_{0i}$ l'énergie de l'onde incidente
+\end{itemize}
+On observe bien les considérations de réflections selon la valeur de $\omega$.
+\section{Conducteur ohmique}
+Considérons une onde incidente qui rentre dans un conducteur ohmique. L'onde initiale est caractérisé par : 
+$$\overrightarrow{E} = E_0.cos(\omega.t-kx)\overrightarrow{u_y}$$
+$$\overrightarrow{B} = \dfrac{E_0.i}{c} cos(\omega t-kx).\overrightarrow{u_z}$$
+Nous rechercherons une solution de la forme : 
+$$\overrightarrow{E}(x,t) = Re[\underline{E}(x)e^{i\omega t}]\overrightarrow{u_y}$$
+Pour l'onde dans le milieu conducteur.
+\subsection{Approximation des régimes quasi-stationnaire}
+A l'aide des équations de Maxwell, on montre que l'on peut faire cette approxiation, c'est à dire considérer que : 
+$$\rho = 0$$
+$$\dfrac{1}{c^2} \dfrac{\partial \overrightarrow{E}}{\partial t} = 0$$
+Dans les équations de Maxwell si : 
+$$\varepsilon_0.\omega \ll \gamma$$
+\subsection{Expression du champs électrique}
+En utilisant les équations de Maxwell, on montre que : 
+$$\overrightarrow{E} = E_0.e^{\dfrac{-x}{\delta}}cos(\omega.t-\dfrac{x}{\omega})\overrightarrow{u_y}$$
+De la même façon, on obtient l'expression du champs magnétique : 
+$$\overrightarrow{B} = \dfrac{E_0.e^{\dfrac{-x}{\delta}}.\sqrt{2}}{2.\delta.\omega}.cos(\omega.t - \dfrac{\pi}{4})$$
+\subsection{Puissance absorbée par une tranche de conducteur}
+Considérons une tranche de conducteur, c'est à dire une longeur finie en y et en z, noté a et b, et infinie en x. On obtient : 
+$$<P> = \dfrac{E_{Ot}^2.ab}{2.\sqrt{2}}.\sqrt{\dfrac{\gamma}{\omega.\mu_0}}$$
+On peut obtenir cette expression directement ou à l'aide du vecteur de Poynting.
+\subsection{Onde transmise - Onde réfléchie}
+À l'aide de relation de continuité de l'énergie, et à l'aide de relation sur les champs, on obtient que l'onde est intégralement transmise si : 
+$$\omega = \dfrac{c^2.\mu_0.\gamma}{4\pi}$$
+On obtient des fréquence de l'ordre de $10^{17}$, c'est à dire une longeur d'onde dans le vide de l'ordre du nanomètre. Si cette condition n'est pas rempli, c'est à dire si on travaille avec des fréquences inferieur, alors on obtient une onde réfléchi. Les caractéristiques de cette onde réflechi sont donnée par :
+$$\dfrac{E_{Or}}{E_{0i}} = \dfrac{1-\dfrac{c}{\omega.\delta}}{1 + \dfrac{c}{\omega.\delta}}$$
+Pour des fréquences de l'ordre du kHz, ce rapport est $\backsimeq 1$, on obtient donc que le conducteur se comporte comme un mirroir.

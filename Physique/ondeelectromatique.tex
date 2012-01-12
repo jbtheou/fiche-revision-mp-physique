@@ -1,0 +1,95 @@
+\chapter{Ondes électromagnétique}
+\section{Solution des équations de propagations}
+\subsection{Équation de propagation}
+D'après les quatres équations de Maxwell, nous pouvons obtenir des équations de propagations. Par exemple, pour l'équation de propagation du champs électrique $\overrightarrow{E}$, nous faisons : 
+$$\overrightarrow{rot}(\overrightarrow{rot}(\overrightarrow{E}))$$
+Qui, d'après les équations de Maxwell donne : 
+$$\overrightarrow{rot}(\overrightarrow{rot}(\overrightarrow{E})) = \overrightarrow{rot}(-\dfrac{d\overrightarrow{B}}{dt})$$
+En développant à l'aide de l'analyse vectorielle, et en se placant dans le vide, c'est à dire avec : 
+$$\rho = 0$$
+$$\overrightarrow{j} = 0$$
+On obtient l'équation de propagation : 
+$\overrightarrow{\Delta\overrightarrow{E}} - \varepsilon_0.\mu_0.\dfrac{\partial^2 \overrightarrow{E}}{\partial t^2} = 0$
+On obtient de même pour $\overrightarrow{B}$
+\subsection{Ondes planes}
+\begin{de}
+Une onde plane est une solution de l'équation de propagation qui ne dépend que d'une variable d'espace en coordonnée cartésienne.
+\end{de}
+Par exemple (ceci reste valable dans toute cette fiche), soit f une onde plane ne dépendant que de x et de t : 
+$$f(x,t)$$
+L'équation de propagation devient : 
+$$\dfrac{\partial ^2 f}{\partial x^2} - \dfrac{1}{c^2}.\dfrac{\partial^2 f}{\partial t^2} = 0$$
+En posant $\alpha$ et $\beta$ défini par : 
+$$\alpha = x - ct$$
+$$\beta = x + ct$$
+Et en développant, on obtient que la solution général est une combinaison linéaire de deux ondes progressive ( c'est à dire qui translate le motif), qui progresse dans des sens opposés
+\subsection{Onde sphérique}
+\begin{de}
+En coordonnée sphérique, une onde sphérique est une solution de l'équation de propagation qui ne dépend que de r et t. 
+\end{de}
+En développant de façon analogue à précédement, mais cette fois en utilisant y=rf, on obtient que cette solution est une onde progression atténué en $\dfrac{1}{r}$.
+\section{Onde électromagnétique plane progressive}
+\begin{de}
+Une onde plane progressive, f, est définie par : 
+\begin{itemize}
+ \item[$\rightarrow$] Plane : f(x,t)
+ \item[$\rightarrow$] Progresssive : f(x-ct), c'est à dire que : $x_2 - x_1 = c.(t_2-t_1)$
+\end{itemize}
+\end{de}
+\subsection{Les champs E et B sont transverse}
+En utilisant les divergences de ces champs, on montre respectivement que : 
+$$\overrightarrow{E}\bot \overrightarrow{u_x}$$
+$$\overrightarrow{B} \bot \overrightarrow{u_x}$$
+\subsection{Les champs sont orthogonaux}
+En partant de l'expression du rotationel de $\overrightarrow{E}$, on montre que : 
+$$\overrightarrow{B} \bot \overrightarrow{E}$$
+En se placant dans l'hypothèse d'une onde plane progressive.\\
+On montre plus particulièrement que :
+$$\overrightarrow{B} = \dfrac{\overrightarrow{u_x} \wedge \overrightarrow{E}}{c}$$
+\subsection{Force exercée sur une particule chargée par l'onde}
+La force exercée est la force de Lorentz. En remplacant la composante magnétique par l'expression de $\overrightarrow{B}$ déterminé précédement, on obtient que dans le cadre de le mécanique classique, c'est à dire pour des vitesse négligable devant la vitesse de la lumière, la force de Lorentz se ramène dans ce cas à : 
+$$\overrightarrow{f} \backsimeq q.\overrightarrow{E}$$
+\subsection{Vecteur de Poynting}
+Par définition : 
+$$\overrightarrow{\pi} = \dfrac{\overrightarrow{E}\wedge\overrightarrow{B}}{\mu_0}$$
+En développent à l'aide de l'expression de $\overrightarrow{B}$ déterminé précédement, et à l'aide de la densité d'énergie dans l'espace, u, défini par : 
+$$u = \varepsilon_0.E^2$$
+On montre que : 
+$$\overrightarrow{\pi} = c.u.\overrightarrow{u_x}$$
+On obtient donc que l'énergie se progage selon l'axe de propagation et en étudiant la puissance, on obtient que l'énergie se déplace à la vitesse de la lumière.
+\section{Onde plane progressive monochromatique}
+\begin{de}
+On dit que f est une onde monochromatique si l'on peut l'écrire sous la forme : 
+$$f = A.cos(k(x-ct))$$
+\end{de}
+\subsection{Propriétés}
+\subsubsection{Celle d'une onde progressive}
+Cette onde possède toutes les propriétés énoncé précédement, de part son caratère progressive.
+\subsubsection{Double periodicité}
+Posons : 
+$$kc = \omega$$
+De ce fait, on peut écrire f sous la forme : 
+$$f = A.cos(k.x-\omega.t)$$
+En fixant t, on montre que la fonction est periodique par rapport à x, on défini sa période $\lambda$, periode spatial, par : 
+$$\lambda = \dfrac{2\pi}{k}$$
+De même, en fixant x, on montre que la fonction est periodique par rapport à t, on défini sa période T, période temporel, par : 
+$$T = \dfrac{2\pi}{\omega}$$
+On peut donc écrire f sous la forme suivante, qui fait apparaitre la double periodicité : 
+$$f = A.cos(2\pi.(\dfrac{x}{\lambda} - \dfrac{t}{T}))$$
+\subsubsection{Vecteur d'onde}
+\begin{de}
+On appelle vecteur d'onde :
+$$\overrightarrow{k} = k.\overrightarrow{u_x}$$
+avec k nombres d'onde.\\
+$$f = A.cos(\overrightarrow{k}.\overrightarrow{OM}-\omega.t)$$
+\end{de}
+\subsection{Polarisation}
+\subsubsection{Représentation complexe des champs}
+On peut écrire le champs électrique par exemple sous la forme : 
+$$\overrightarrow{E} = Re(\underline{\overrightarrow{E}}.e^{i(\omega.t-k.x)})$$
+On peut aussi l'écrire sous la forme : 
+$$\overrightarrow{E} = E_{oy}.\overrightarrow{u_y} + E_{oz}.e^{i\varphi}\overrightarrow{u_z}$$
+\subsubsection{Onde polarisée rectilignement}
+Cette onde est polarisée rectiligement si $\varphi=0$. Dans ce cas, l'onde décrit une droite en vibrant.
+\subsubsection{Onde polarisée elliptiquement}
+Si $\varphi \neq 0$, alors l'onde décrit en vibrant un éllipse. 

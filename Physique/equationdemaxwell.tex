@@ -1,0 +1,68 @@
+\chapter{Équations de Maxwell}
+\section{Les quatres équations}
+\subsection{Flux magnétique}
+L'équation de Maxwell du flux magnétique, est donnée par : 
+$$div(\overrightarrow{B}) = \overrightarrow{0}$$
+Ceci est la forme locale de l'équation. Nous avons aussi une forme intégrale, à l'aide du théorème de Stockes : 
+$$\underset{\Sigma}\iint \overrightarrow{B}.\overrightarrow{n}.dS = 0$$
+Avec $\Sigma$ une surface fermé.
+\subsection{Équation de Maxwell-Faraday}
+L'équation de Maxwell-Faraday s'écrit, sous sa forme locale :
+$$\overrightarrow{rot}(\overrightarrow{E}) = \dfrac{- \partial \overrightarrow{B}}{\partial t}$$
+En faisant circuler le champs électrique, on obtient que : 
+$$e = \dfrac{-d \Phi}{dt}$$
+Ceci est l'expression globale. On remarque que les deux équations précédentes sont idépendante du milieu considéré.
+\subsection{Équation de Maxwell-Gauss}
+La forme locale est donnée par :
+$$div(\overrightarrow{E}) = \dfrac{\rho}{\varepsilon_0}$$
+On en déduit la forme global, qui n'est d'autre que le théorème de Gauss : 
+$$\underset{\Sigma}\iint \overrightarrow{E}.\overrightarrow{n}.dS = \dfrac{Q_{int}}{\varepsilon_0}$$
+\subsection{Équation de Maxwell-Ampère}
+La forme locale de cette équation est donnée par :
+$$\overrightarrow{rot}(\overrightarrow{B}) = \mu_0.\overrightarrow{j} + \varepsilon_0.\mu_0\dfrac{\partial \overrightarrow{E}}{\partial t}$$
+On observe donc que cette forme locale est la forme locale du théorème d'Ampère, à laquelle on à ajouté une différentielle du champs éléctrique. Cette modification était obligatoire pour corriger des abérrations du théorème d'Ampère.
+\section{Propriétés des champs}
+\subsection{Conditions limites}
+\subsubsection{Du champs électrique}
+Considérons une surface de densité surfacique $\sigma$, séparant deux milieux (1) et (2). On obtient que : 
+$$\overrightarrow{E_2} - \overrightarrow{E_1} = \dfrac{\sigma}{\varepsilon_0}\overrightarrow{n_{1\rightarrow 2}}$$
+Avec $\overrightarrow{E_k}$ le champs électrique crée dans le milieu k, en un point très prés de la surface de séparation.
+\subsubsection{Champs magnétique}
+Considérons un "cylindre élémentaire", parcouru par un vecteur densité de courant $\overrightarrow{j_s}$. On obtient que : 
+$$\overrightarrow{B_2}-\overrightarrow{B_1} = \mu_0.\overrightarrow{j_s}\wedge\overrightarrow{n_{1\rightarrow 2}}$$
+Avec $\overrightarrow{B_k}$ le champs magnétique crée dans le milieu k, en un point très prés de la surface de séparation.
+\subsection{Équations de propagation des champs}
+\subsubsection{Champs électrique}
+En appliquant l'opérateur $\overrightarrow{rot}$ à $\overrightarrow{rot}(\overrightarrow{E})$, on obtient l'équation de propagation du champs électrique : 
+$$\overrightarrow{\Delta(\overrightarrow{E})} - \varepsilon_0.\mu_0.\dfrac{\partial^2\overrightarrow{E}}{\partial t^2} = \mu_0\dfrac{\partial \overrightarrow{j}}{\partial t} + \overrightarrow{grad}(\dfrac{\rho}{\varepsilon_0})$$
+\subsubsection{Champs magnétique}
+De la même façon pour le champs magnétique, on obtient que :
+$$\overrightarrow{\Delta(\overrightarrow{B})} - \varepsilon_0.\mu_0.\dfrac{\partial^2 \overrightarrow{B}}{\partial t^2} = \mu_0.\overrightarrow{rot}(\overrightarrow{j})$$
+\section{Potentiels}
+\subsection{Définitions}
+\subsubsection{Potentiel vecteur}
+En partant de la définition du potentiel vecteur $\overrightarrow{A}$, on montre que l'on peut obtenir un autre potentiel vecteur $\overrightarrow{A'}$ de la façon suivante
+$$\overrightarrow{A'} = \overrightarrow{A} + \overrightarrow{grad}(\Phi)$$
+\subsubsection{Potentiel scalaire V}
+En partant de l'expression de $\overrightarrow{rot}(\overrightarrow{E})$, on montre que : 
+$$\overrightarrow{E} = \dfrac{-\partial \overrightarrow{A}}{\partial t} - \overrightarrow{grad}(V)$$
+On obtient donc l'expression connu dans le cas statique.\\
+De même que pour le potentiel vecteur, on montre que : 
+$$V' = V - \dfrac{\partial \Phi}{\partial t} + cte$$
+$\Phi$ est donc le lien entre $\overrightarrow{A}$ et V. On ne peut pas fixer arbitrairement $\overrightarrow{A}$ et V, ces deux potentiels sont liée.
+\subsection{Conditions de Jauge}
+\subsubsection{Équations verifié par le potentiel vecteur et V}
+On montre que ces deux potentiels doivent vérifier les relations suivantes : 
+$$\overrightarrow{\Delta(\overrightarrow{A})} - \varepsilon_0.\mu_0.\dfrac{\partial^2 \overrightarrow{A}}{\partial t^2} = \mu_0.\overrightarrow{j} + \overrightarrow{grad}(div(\overrightarrow{A})+\varepsilon_0.\mu_0.\dfrac{\partial V}{\partial t})$$
+\subsubsection{Jauge de Coulomb}
+La jauge de Coulomb est de poser que : 
+$$div(\overrightarrow{A}) = 0$$
+L'équation précédente devient donc : 
+$$\overrightarrow{\Delta(\overrightarrow{A})} - \varepsilon_0.\mu_0.\dfrac{\partial^2 \overrightarrow{A}}{\partial t^2} = \mu_0.\overrightarrow{j} + \varepsilon_0.\mu_0.\dfrac{\partial}{\partial t}\overrightarrow{grad}(V)$$
+\subsubsection{Jauge de Lorentz}
+La jauge de Lorentz est de poser que : 
+$$div(\overrightarrow{A})+\varepsilon_0.\mu_0.\dfrac{\partial V}{\partial t} = 0$$
+À l'aide des ces jauges, on obtient donc deux équations : 
+$$\overrightarrow{\Delta(\overrightarrow{A})} + \epsilon_0.\mu_0.\dfrac{\partial^2 \overrightarrow{A}}{\partial t^2} = -\mu_0.\overrightarrow{j}$$
+$$\Delta(V) + \epsilon_0.\mu_0.\dfrac{\partial^2 V}{\partial t^2} = -\dfrac{\rho}{\varepsilon_0}$$
+

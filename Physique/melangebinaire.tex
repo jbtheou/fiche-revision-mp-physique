@@ -1,0 +1,73 @@
+\chapter{Équilibre liquide-vapeur d'un mélange binaire}
+\section{Équilibre liquide-vapeur pour un corps pur}
+\subsection{Équilibre d'un corps pur sous deux phases}
+Considérons un corps pur présent sous deux phases, liquide et gazeux.\\
+Si on considère une transformation monotherme et monobar, on obtient que :
+$$\Delta G \leq 0$$
+On en déduit que le système évolue toujours vers la phase avec le potentiel chimique le plus faible.\\
+À l'équilibre chimique, on à :
+$$\mu_l(T,P) = \mu_v(T,P)$$
+La pression d'équilibre est donc une fonction de la température.\\
+De cette considération, on obtient les diagrammes visible dans les fiches de révision de Sup, dans les changements d'états.
+\subsection{Chaleur latente de changement d'état}
+\begin{de}
+On considère un système de 1 kilogramme. A pression constant, on obtient un palier à température constante, dans le diagramme T = f(t)\\
+Un corps pur est défini comme un corps admettent un palier de changement d'état.
+\end{de}
+\begin{de}
+La chaleur latente est l'énergie à fournir à 1 kilogramme de matière pour effectuer le changement d'état.\\
+On obtient :
+$$L = \Delta H_{vaporisation}$$
+L'enthalpie etant une fonction d'état, on peut imaginer une transformation réversible pour effectuer le changement d'état. On obtient donc que : 
+$$\Delta S = \dfrac{\Delta H}{T_v}$$
+\end{de}
+\subsection{Relation de Clapeyron}
+Supposons que le système soit à l'équilibre à la température $T_1$ et à la pression $P_1$.\\
+On as donc : 
+$$\mu_l(T_1,P_1) = \mu_v(T_1,P_1)$$
+On peut considérer qu'à la température $T_1 + dT$ et à la pression $P + dP$, le système est encore à l'équilibre.
+On en déduit que :
+$$\Delta  \mu_l = v_ldP - s_ldT$$
+avec $v_l$ et $s_l$ des grandeurs molaires. Sachant qu'on obtient la même relation pour $\Delta \mu_v$, on obtient que : 
+$$L = \dfrac{T_v(v_v-v_l)dP}{dT}$$
+Ceci constitue la relation de Clapeyron. On peut d'après cette relation, en considérent le signe de L, déterminer la pente de la courbe de changement d'état dans un diagramme p = f(T), sachant que L est positif lors du changement d'état d'un état ordonnée vers un état moins ordonné.
+\section{Équilibre liquide-vapeur d'un mélange binaire}
+\begin{de}
+On défini un mélange binaire comme un mélange composée de deux entités, qui peuvent être en phase liquide ou en phase gazeuse (ou inclusif ..)
+\end{de}
+Considérons un système composé de deux entités, a et b, avec $n_a$ et $n_b$ les quantités de matière de a et b en phase liquide, $n_a'$ et $n_b'$ les quantités de matière de a et b en phases gazeuse.\\
+Dans l'étude d'un tel système, on défini les factions molaires suivante : 
+$$x_a = \dfrac{n_a}{n_a + n_b}~ et~ x_b = 1 -x_a$$
+$$x_a' = \dfrac{n_a}{n_a' + n_b'}~ et~ x_b' = 1 -x_a'$$
+Le système est caractérisé par :
+$$T,P,x_a',x_a$$
+Or, à l'aide de la relation qui dit que les potentiels chimiques des phases gazeuse et liquide sont égaux à l'équilibre, on obtient deux équations liant ces quatres inconnues.\\
+Le système est donc divariant, il ne dépent que de deux inconnues.
+\section{Mélange de deux constituants totalements miscible à l'état liquide}
+\subsection{Mélange idéale}
+Considérons deux constituants, a et b.\\
+Nous avons les hypothèses suivantes : 
+$$P_a = x_a.P_{sa}(T)$$
+$$P_b = x_b.P_{sb}(T) = (1-x_a)P_{sb}(T)$$
+On obtient donc que : 
+$$P = P_a+P_b = P_{sb}(T) + x_a(P_{sa}(T)-P_{sb}(T))$$
+\subsubsection{Diagramme isotherme}
+On en déduit que dans un diagramme isotherme, la pression est une fonction affine du titre $x_a$, le titre du liquide.\\
+Si on considère le titre en vapeur, $x'_a$, on obtient que : 
+$$P = \dfrac{P_{sb}}{1-x'a(1-\dfrac{P_{sb}}{P_{sa}})}$$
+On obtient donc une hyperbole.\\
+Soit $x''_a$ le nombre de mole de a (liquide + vapeur), sur le nombre totale de moles du système. Pour qu'il y ai équilibre liquide vapeur, il faut que ce titre soit compris entre les deux courbes.
+\subsubsection{Diagramme isobare}
+Les relations démontrer précédement reste valable. On obtient, en fixant la pression un diagramme isobare
+\subsubsection{Règle des segments inverse}
+Soit y, la grandeur défini par : 
+$$y = \dfrac{x''_a-x'_a}{x_a-x_a'}$$
+On obtient que : 
+$$y=\dfrac{d(MV)}{d(LV)}$$
+avec d(XZ) la distance entre X et Z.
+\subsection{Mélange réel}
+On peut toujours construire les diagrammes à l'aide d'expérience. On observe par contre des diagrammes avec un ou deux fusceaux, et des points azéotropique.
+\subsubsection{Points azéotropique}
+Un point azéotropique est un point de rencontre des deux courbe f($x_a$) et $f(x'_a)$, par exemple.\\
+En ce point, le changement d'état s'effectue a temperature constante. On pourrai donc croire que le mélange binaire est un corps pur, car l'existance de ce palier est l'une de leurs caractéristique. Mais ce point azéotropique dépend de la pression, donc le palier dépend de la pression à la quelle on travaille, ce qui n'est pas le cas pour un corps pur.\\
+Ces point ont une forte influence, dans la distilation par exemple, car on ne peut pas dissocier les deux composants. On peut dissocier un composant et un mélange azéotrope.

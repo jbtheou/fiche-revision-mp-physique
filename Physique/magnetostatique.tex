@@ -1,0 +1,151 @@
+\chapter{Loi de Biot et Savart}
+\section{Distribution linéique}
+\begin{enon}
+Considérons le champ électrique $d\overrightarrow{B}$ crée par un élément de longeur dl.\\
+On obtient l'expression du champs par la relation suivante :
+$$d\overrightarrow{B} = \dfrac{\mu_0.i}{4.\pi}.\dfrac{\overrightarrow{dl}\wedge\overrightarrow{PM}}{PM^3}$$
+\end{enon}
+\section{Distribution volumique}
+\begin{enon}
+On peut élargir la loi de Biot et Savart à une distribution volumique de charge.\\
+Sachant que : 
+$$i = \iiint \overrightarrow{j}.\overrightarrow{n}.dS$$
+On obtient l'expression du champs $\overrightarrow{B}$ crée par une distribution volumique de courant :
+$$\overrightarrow{B} = \iiint \dfrac{\mu_0}{4.\pi}.\dfrac{\overrightarrow{j}\wedge\overrightarrow{PM}}{PM^3}.dV$$
+\end{enon}
+\section{Propriété de symétrie}
+\begin{prop}
+Nous avons les propriétés suivantes concernant les symétries :\\
+\begin{itemize}
+ \item[$\rightarrow$] Si M appartient à un plan de symétrie, alors le champs $\overrightarrow{B}(M)$ est perpendiculaire à ce plan
+ \item[$\rightarrow$] Si M appartient à un plan d'anti-symétrie, alors le champs $\overrightarrow{B}(M)$ appartient à ce plan.
+\end{itemize}
+\end{prop}
+\chapter{Potentiel Vecteur}
+\section{La divergence du champs magnétique est nul}
+\subsection{Cacul pour le champs crée par un élément de circuit}
+\begin{prop}
+Considérons le champs crée en un point M par une surface élémentaire dl d'un fil parcourus par l'intensité i.\\
+Considérons $\Sigma$, une surface contenant M. D'ou, l'expression du flux sur cette surface : 
+$$\underset{\Sigma}\iint \overrightarrow{dB}.\overrightarrow{n}.dS$$
+Or, les $\overrightarrow{n}.\overrightarrow{dB}$ s'annule car chaque terme possède sont anti-symétrique. Donc le flux à travers la surface $\Sigma$ est nul. De plus, nous savons que, avec V le volume délimité par $\Sigma$ : 
+$$\underset{\Sigma}\iint \overrightarrow{dB}.\overrightarrow{n}.dS = \underset{V}\iint div(\overrightarrow{B})dV$$
+Or le flux est nul quelque soit $\Sigma$. On obtient donc que :
+$$div(d\overrightarrow{B}) = 0$$
+Donc que : 
+$$div(\overrightarrow{B}) = 0$$
+La divergence du champs magnétique est donc nul.
+\end{prop}
+\subsection{Calcul utilisant l'analyse vectorielle}
+\begin{prop}
+Soit $\overrightarrow{D}$ un champs vectorielle et f une grandeur scalaire. Nous avons la propriété suivante : 
+$$\overrightarrow{rot}(f.\overrightarrow{D}) = f.\overrightarrow{rot}(\overrightarrow{D})+\overrightarrow{grad}(f)\wedge\overrightarrow{D}$$
+\end{prop}
+\begin{prop}
+Considérons un circuit filiforme. D'après la loi de Biot et Savard, nous avons : 
+$$\overrightarrow{B} = \dfrac{\mu_0.i}{4\pi}\int \overrightarrow{dl}\wedge\overrightarrow{PM}.\dfrac{1}{PM^3}$$
+En développent PM, on obtient que :
+$$\overrightarrow{B} = \dfrac{\mu_0.i}{4\pi}\int \overrightarrow{grad}_M(\dfrac{1}{PM})\wedge\overrightarrow{dl}$$
+Avec $\overrightarrow{grad}_M$ le gradiant par rapport à aux coordonnées de M.\\
+De plus, avec la propriété précédente, on obtient que :
+$$\overrightarrow{grad}_M(\dfrac{1}{PM})\wedge\overrightarrow{dl} = \overrightarrow{rot}_M(\dfrac{\overrightarrow{dl}}{PM}-\dfrac{1}{PM}.\overrightarrow{rot}_M(\overrightarrow{dl})$$
+Or $\overrightarrow{dl}$ est totalement indépendant de M, donc $\overrightarrow{rot}_M(\overrightarrow{dl} = 0$.\\
+On obtient donc que :
+$$\overrightarrow{B}=\dfrac{\mu_0.i}{4.\pi}.\int \overrightarrow{rot}_M(\dfrac{\overrightarrow{dl}}{PM})$$
+De plus, $\overrightarrow{rot}_M$ est indépendant du point P, on peut donc inverser l'intégrale et le $\overrightarrow{rot}$.\\
+On obtient donc : 
+$$\overrightarrow{B}=\overrightarrow{rot}_M\left(\int \dfrac{\mu_0.\overrightarrow{dl}}{4.\pi.PM}\right)$$
+De plus on sait que quelque soit le champs de vecteur $\overrightarrow{D}$, nous avons le résultat suivant :
+$$div(\overrightarrow{rot}(\overrightarrow{D)})=0$$
+On obtient donc que :
+$$div(\overrightarrow{B})=0$$
+\end{prop}
+\section{Défintions du potentiel vecteur}
+\begin{de}
+On défini le potentiel vecteur par :\\
+Si $div(\overrightarrow{B})=0$, alors $\exists \overrightarrow{A}$ telque $\overrightarrow{B}=\overrightarrow{rot}(\overrightarrow{A})$.\\
+On appele potentiel vecteur le vecteur $\overrightarrow{A}$. Ce potentiel vecteur peut avoir une "infinité" d'expression. Son expression classique est : 
+$$\overrightarrow{A}=\int \dfrac{\mu_0.i}{4.\pi.PM}.\overrightarrow{dl}$$ 
+\end{de}
+\subsection{Jauge dite de Coulomb}
+\begin{prop}
+Pour réduire en quelque sorte cette infinité, on pose que le potentiel vecteur doit vérifier :
+$$div(\overrightarrow{A}) = 0$$
+Cette condition réduit le nombre de possibilité pour $\overrightarrow{A}$. Le potentiel classique vérifie cette condition.
+\end{prop}
+\section{Théorème de Stokes}
+\begin{theo}
+Soit $\overrightarrow{D}(M)$ un champs de vecteur associé au point M.\\
+Considérons un contour $\gamma$.\\
+Soit C la circulation du champs de vecteur sur $\gamma$. On obtient que : 
+$$C = \oint \overrightarrow{D}.\overrightarrow{dl} = \underset{\Sigma}\iint \overrightarrow{rot}(\overrightarrow{D}).\overrightarrow{n}.dS$$
+Avec $\Sigma$ une surface quelconque de contour $\gamma$.\\
+Ce théorème est utile pour détérminer un potentiel vecteur à partir du champs magnétique
+\end{theo}
+\section{Analogie entre le potentiel vecteur et le potentiel scalaire}
+On peut étendre les propriétés vu pour le potentiel scalaire V au potentiel vecteur $\overrightarrow{A}$. Ceci consiste à faire les transpositions suivantes pour la composante $A_x$ par exemple :
+$$\rho \rightarrow j_x $$
+$$\dfrac{1}{4.\pi.\varepsilon_0}\rightarrow\dfrac{\mu_0}{4.\pi}$$
+Avec $j_x$ la composant selon $u_x$ du vecteur densité de courant. On obtient donc le parralèle suivant par exemple : 
+$$\Delta V = \dfrac{-\rho}{\varepsilon_0} \rightarrow \Delta A_x = -\mu_0.j_x$$
+\section{Champ magnétique au voisinage d'un axe d'anti-symétrie}
+Considérons le champs magnétique crée par un spire centré sur l'axe Oz par exemple. On obtient donc par raison de symétrie que :
+$$\overrightarrow{B} = B_1(r,z)\overrightarrow{u_r}+B_2(r,z)\overrightarrow{u_z}$$
+Plaçons nous dans le plan Oxy. peut donc assimiler $\overrightarrow{u_r}$ et $\overrightarrow{u_z}$ au vecteur des coordonées cartésiennes. Sachant que l'axe est un axe d'anti-symétrie, on obtient que $B_1$ est une fonction impaire et que $B_2$ est une fonction paire (utile pour envisager un développement limite de ces fonctions).\\
+De plus on sait que : 
+$$div(\overrightarrow{E}) = 0$$
+Ceci implique donc que 
+$$\underset{\Sigma}\iint \overrightarrow{B}.\overrightarrow{n}.dS = 0$$
+On obtient au final que : 
+$$B_1(r,z) = -\dfrac{\partial B_2}{\partial z}.\dfrac{r}{2}$$
+En connaisant la composante du champs sur l'axe, on connait le champs au voisinage de l'axe.\\
+On peut étendre ce résonnement en électrostatique, en considérant que div($\overrightarrow{E}$) = 0, c'est à dire que l'axe ne porte par de charge.
+\chapter{Théorème d'Ampère}
+\section{Laplacien vecteur}
+En coordonée cartesienne, on peut définir le Laplacien vecteur du potentiel vecteur de la façon suivante : 
+$$\overrightarrow{\Delta(\overrightarrow{A}}) = \Delta(\overrightarrow{A}.\overrightarrow{u_x})\overrightarrow{u_x}+\Delta(\overrightarrow{A}.\overrightarrow{u_y})\overrightarrow{u_y}+\Delta(\overrightarrow{A}.\overrightarrow{u_z})\overrightarrow{u_z}$$
+\section{Forme locale du théorème d'Ampère}
+\begin{theo}
+Nous avons, nous l'avons vu : 
+$$\Delta \overrightarrow{A}.\overrightarrow{u_x} = -\mu_0.\overrightarrow{j}.\overrightarrow{u_x}$$
+De plus, on obtient le résultat suivant :
+$$\overrightarrow{rot}(\overrightarrow{rot}(\overrightarrow{A})) = \overrightarrow{grad}(div(\overrightarrow{A})) - \overrightarrow{\Delta(\overrightarrow{A}})$$
+D'ou, en considérant la jauge de Coulomb sur le potentiel vecteur, on obtient que : 
+$$\overrightarrow{rot}(\overrightarrow{B}) = -\overrightarrow{\Delta(\overrightarrow{A})}$$
+Donc : 
+$$\overrightarrow{rot}(\overrightarrow{B}) = \mu_0.\overrightarrow{j}$$
+Ceci consitue la forme locale du théorème d'Ampère.
+\end{theo}
+\section{Forme global du théorème d'Ampère}
+\begin{theo}
+Considérons un coutour fermé $\Gamma$, et $\Sigma$ une surface quelconque de contour $\Gamma$.\\
+En considérant la forme locale du théorème d'Ampère et le théorème de Stockes, on obtient que : 
+$$\underset{\Gamma}\oint \overrightarrow{B}.\overrightarrow{dl}= \mu_0.i$$
+Avec i le courant enlacé défini par : 
+$$i = \underset{\Sigma}\iint \overrightarrow{j}.\overrightarrow{n}.dS$$
+On doit définir le sens de $\overrightarrow{dl}$. Le courant enlacé est donc une grandeur algébrique
+\end{theo}
+\chapter{Champs magnétique crée par un dipole magnétique}
+\section{Définitions et propriétés}
+\begin{de}
+Un dipole magnétique est n'importe quel circuit "vu de loin", c'est à dire que pour un point M suffisament loin du dipole, on peut faire l'approximation dipolaire, c'est à dire que $\parallel\overrightarrow{OM}\parallel \gg$ devant toutes les distances caractéristique du circuit.
+\end{de}
+\begin{prop}
+En partant de l'expression "classique" du potentiel vecteur, en déterminant le produit scalaire :
+$$\overrightarrow{K}.\overrightarrow{A} = \int \mu_0.i.\dfrac{\overrightarrow{K}.\overrightarrow{dl}}{4.\pi.PM}$$
+Avec $\overrightarrow{K}$ un vecteur constant et en effectuant l'approximation dipolaire, on obtient que : 
+$$\overrightarrow{A} = \dfrac{\mu_0}{4.\pi}.\dfrac{\overrightarrow{M}.\overrightarrow{OM}}{OM^3}$$
+Avec $\overrightarrow{M}$ le moment magnétique défini par : 
+$$\overrightarrow{M} = \iint i.n.dS$$
+A partir de cette expression du potentiel vecteur, on peut détérminer l'expression du champs magnétique, sachant que :
+$$\overrightarrow{B} = \overrightarrow{rot}(\overrightarrow{A})$$
+\end{prop}
+\section{Analogie entre dipole électrique et dipole magnétique}
+Sachant que le potentiel crée par un dipole électrique est donnée par :
+$$V = \dfrac{\overrightarrow{p}.\overrightarrow{OM}}{4\pi\varepsilon_0.r^3}$$
+En effectuant l'approximation du dipole électrique, et que le potentiel vecteur dans le cas qu'un dipole magnétique est donnée par :
+$$\overrightarrow{A} = \dfrac{\mu_0.\overrightarrow{M}\wedge\overrightarrow{OM}}{4.\pi.OM^3}$$
+Toujours en effectuant l'approximation du dipole magnétique. On peut donc étendre les résultats obtenu dans le cas d'un dipole électrique pour un dipole magnétique en effectuant les modifications suivantes :
+$$\overrightarrow{p} \rightarrow \overrightarrow{M}$$
+$$\overrightarrow{p}.\overrightarrow{OM} = \overrightarrow{M}\wedge\overrightarrow{OM}$$
+$$\dfrac{1}{\varepsilon_0} \rightarrow \mu_0$$

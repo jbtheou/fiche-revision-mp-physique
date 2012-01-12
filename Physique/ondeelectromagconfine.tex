@@ -1,0 +1,92 @@
+
+\chapter{Ondes électromagnétiques "confinées" avec conditions aux limites}
+\section{Réflexion d'une onde plane progressive monochromatique sur un plan conducteur parfait}
+\begin{de}
+On considère qu'un conduteur est parfait quand : 
+$$\gamma\rightarrow +\infty$$
+Ce qui revient donc à :
+$$\overrightarrow{E} = \overrightarrow{0}$$
+\end{de}
+\subsection{Réflexion normale}
+Considérons un champs électrique et un champs magnétique de la forme : 
+$$\overrightarrow{E_i} = E_{0i}cos(\omega.t-kx)\overrightarrow{u_y}$$
+$$\overrightarrow{B_i} = \dfrac{E_{0i}}{c}.cos(\omega.t - kx)\overrightarrow{u_z}$$
+\subsubsection{Onde réflechie}
+On obtient une onde réfléchi, avec un coefficiant de réflexion -1, c'est à dire que :
+$$\dfrac{E_{Or}}{E_{0i}} = -1$$
+Il n'y a donc pas d'onde transmise. On obtient donc comme expression pour les champs réfléchis :
+$$\overrightarrow{E_r} = -E_{oi}cos(\omega.t+kx)\overrightarrow{u_y}$$
+$$\overrightarrow{B_r} =\dfrac{-\overrightarrow{u_x}\wedge\overrightarrow{E_r}}{c} = \dfrac{E_{oi}}{c}.cos(\omega.t+kx)\overrightarrow{u_z}$$
+On obtient donc des ondes planes progressive, mais de sens opposé.
+\subsubsection{Onde stationnaire}
+En étudiant maintenant le champs électrique totale, et le champs magnétique totale, c'est à dire : 
+$$\overrightarrow{E} = \overrightarrow{E_i} + \overrightarrow{E_r}$$
+$$\overrightarrow{B} = \overrightarrow{B_i} + \overrightarrow{B_r}$$
+On obtient que ces champs ne sont pas des ondes progressives :
+$$\overrightarrow{E} = 2.E_{Oi}.sin(kx)sin(\omega.t).\overrightarrow{u_y}$$
+$$\overrightarrow{B} = \dfrac{2.{E_{Oi}}}{c}.cos(kx).cos(\omega.t)\overrightarrow{u_z}$$
+On obtient que ces champs s'annule periodiquement selon x. On obtient donc, par analogie avec les cordes vibrante, des ventres et des noeuds. Le champs vibre donc sur place.
+\subsubsection{Énergie transporté}
+En calculant le vecteur de Poyting, on obtient que : 
+$$<\overrightarrow{\pi}> = 0$$
+Sur une periode, il n'y a donc pas de transporte d'énergie.
+\subsubsection{Interface}
+En considérant les rélations de discontinuité des champs a la frontière, on obtient qu'en $x = 0^-$, les charges oscille, avec : 
+$$\overrightarrow{j_s} = \dfrac{2.E_{Oi}}{\mu_0.c}.cos(\omega.t)\overrightarrow{u_y}$$
+On obtient donc que les charges oscille à la surface du conducteur
+\subsubsection{Phénomène de résonnance}
+Considérons deux conducteurs parralèle séparé par une distance L. Il faut que L vérifie, pour pouvoir observé un phénomène de résonnance, la relation suivante : 
+$$L = p.\dfrac{\lambda}{2}$$
+\subsection{Réflexion oblique}
+Considérons une onde arrivant oblique par rapport à l'axe Ox, formant l'angle i avec cette axe. Elle se réflechie sur le conducteur parfait. Nous avons : 
+$$\overrightarrow{E_i} = E_{Oi}.cos(\omega.t-\overrightarrow{k_i}.\overrightarrow{OM})\overrightarrow{u_z}$$
+$$\overrightarrow{B_i} = \dfrac{\overrightarrow{k_i}}{k}\wedge\dfrac{\overrightarrow{E_i}}{c}$$
+Avec : 
+$$\overrightarrow{k_i} = k.(cos(i).\overrightarrow{u_x}+sin(i).\overrightarrow{u_y})$$
+$$\overrightarrow{k_r} = k.(-cos(i).\overrightarrow{u_x}+sin(i).\overrightarrow{u_y})$$
+On obtient donc par continuité, c'est à dire sachant que le champs en nul en x=0, que : 
+$$\overrightarrow{E_r} = -E_{Oi}.cos(\omega.t - \overrightarrow{k_r}\wedge\overrightarrow{OM})\overrightarrow{u_z}$$
+$$\overrightarrow{B_r} = \dfrac{\overrightarrow{k_r}}{k}\wedge\dfrac{\overrightarrow{E_r}}{c}$$
+En développant, a l'aide des équations de Maxwell, on obtient les expressions des champs totaux $\overrightarrow{E}$ et $\overrightarrow{B}$.
+\section{Propagation guidée entre deux plans parallèle}
+Considérons deux plans parallèle, l'un défini par x=0, l'autre par x=a. Par discontinuité des champs, nous avons les relations de passage suivante en 0:
+$$\overrightarrow{E}_{x = 0^+} = \dfrac{\sigma}{\varepsilon_0}.\overrightarrow{u_x}$$
+$$\overrightarrow{B}_{x = 0^+} = \mu_0.\overrightarrow{j_s}\wedge\overrightarrow{u_x}$$
+Nous allons rechercher des solutions de la forme : 
+$$\overrightarrow{E} = Re[\overrightarrow{\underline{E}]}(x,y).e^{i(\omega.t - k.z)}$$
+On recherche donc des solutions qui se propage selon l'axe des z.
+\subsection{Champs électrique transverse normale aux plaques}
+On recherche un champs électrique porté par $\overrightarrow{u_x}$. En utilisant les équations de Maxwell, on montre que si : 
+$$k = \dfrac{\omega}{c}$$
+Alors :
+$$E(x,y) = E_0$$
+est une solutions du problème.
+\subsection{Champs électrique parallèle aux plaques}
+On recherche un champs électrique cette fois ci porté par $\overrightarrow{u_y}$. 
+\subsubsection{Équation de propagation}
+À l'aide de l'équation de propagation, on montre que le champs vérifie l'équation différentielle suivante :
+$$\dfrac{\partial^2 E(x)}{\partial x^2} = (k^2 - \dfrac{\omega^2}{c^2}).E(x)$$
+On observe donc que le type de solution dépend du signe de : 
+$$(k^2 - \dfrac{\omega^2}{c^2})$$
+\subsubsection{Conditions aux limites}
+Les conditions aux limites nous disent que E(x) s'annule deux fois en 0 et en a. Le cas hyperbolique est donc impossible dans la résolution de l'équation différentielle, on obtient donc une solution sinusoïdale : 
+$$\overrightarrow{E} = E_0.sin(\dfrac{n.\pi.x}{a}.cos(\omega.t - kx)).\overrightarrow{u_y}$$
+\subsubsection{Relation de dispersion}
+D'après l'équation différentielle et les conditions aux limites, nous savons que : 
+$$\dfrac{n.\pi}{a} = \sqrt{\dfrac{\omega^2}{c^2} - k^2}$$
+Ceci implique donc que : 
+$$f \geq \dfrac{n.c}{2.a}$$
+Le choix de n n'est donc pas totalement libre.\\
+De plus, d'après l'expression de la vitesse de phase : 
+$$v_{\phi} = \dfrac{\omega}{k}$$
+On obtient que cette vitesse dépend de la fréquence.
+\subsubsection{Vitesse de groupe}
+En développant l'expression de l'énergie, on montre qu'elle se déplace à une vitesse de groupe : 
+$$v_g = \dfrac{c^2}{v_{\varphi}}$$
+Asymptotiquement en fréquence, on obtient donc que la vitesse de groupe et la vitesse de phases tendent vers c.
+\subsection{Interprétation en termesde superposition d'onde plane}
+On peut interpréter :
+$$\overrightarrow{E} = E_0.sin(\dfrac{n.\pi.x}{a}.cos(\omega.t - kx)).\overrightarrow{u_y}$$
+Qui n'est pas une onde plane, comme la superposition de deux ondes planes. On obtient cette décomposition à l'aide d'un changement de variable : 
+$$\overrightarrow{E} = \dfrac{1}{2}.E_0[cos(\omega.t - \overrightarrow{k_1}.\overrightarrow{OM}) - cos(\omega.t - \overrightarrow{k_2}.\overrightarrow{OM})]$$
+On obtient donc que ça peut être interprété comme la superposition de deux ondes planes. En développant les expression de $\overrightarrow{k_1}$ et de $\overrightarrow{k_2}$, on reconnait la figure d'onde réfléchi, et en calculant le module de ces vecteurs, on obtient que l'onde se propage à la vitesse de la lumière.

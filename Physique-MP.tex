@@ -1,0 +1,85 @@
+% % % % % % % % % % Tout ce qui est mis derriÃ¨re un Â«Â %Â Â» n'est pas vu par LaTeX
+% On appelle cela des Â«Â commentairesÂ Â».  Les commentaires permettent de
+% commenter son document - comme ce que je suis en train de faire
+% actuellement - et de cacher du code - cf. la ligne \pagestyle.
+
+\documentclass[a4paper, titlepage,twoside]{book}
+
+\include{preambule}
+
+\begin{document}
+
+\pagestyle{empty}
+\titleGMPHY
+\clearpage
+\frontmatter                  % Prologue.
+\chapter{Licence}
+J'ai décidé d'éditer cet ouvrage sous la licence Créative Commons suivante : CC-by-nc-sa. Pour plus d'information :\\
+http://creativecommons.org/licenses/by-nc-sa/2.0/fr/.\\
+Ce type de licence vous offre une grande liberté, tout en permettant de protéger mon travail contre une utilisation commercial à mon insu par exemple.\\
+Pour plus d'information sur vos droits, consultez le site de Créative Commons
+\chapter{Avant-propos}
+Il y a un plus d'un an, au milieu de ma SUP MP, j'ai décidé de faire mes fiches de révision à l'aide de Latex, un "traitement de texte" très puissant. Il en résulte les fiches qui suivent. Je pense que travailler sur des fiches de révision, totalement séparé de notre cours, est un énorme plus, et réduit grandement la quantité de travail pour apprendre son cours, ce qui laisse plus de temps pour les exercices. Mon experience en tout cas va dans ce sens, j'ai notablement progressé à l'aide de ces fiches.\\
+J'ai décidé de les rassembler sous forme d'un "livre", ou plutôt sous forme d'un recueil. Ce livre à pour principal interet pour moi d'être transportable en cours. C'est cet interet qui m'a poussé à faire ce livre.\\
+Dans la philosophie de mes fiches de révision, ce livre est disponible gratuitement et librement sur mon blog. Il est édité sous License Créative Commons. Vous pouvez librement adapter ce libre à vos besoins, les sources Latex sont disponibles sur mon blog. Je pense que pour être en accord avec la philosophie de ces fiches, il serai bien que si vous effectuez des modifications de mon ouvrage, vous rendiez ces modifications disponible à tous. Je laisserai volontiers une place pour vos modifications sur mon blog. Je pense sincèrement que ce serai vraiment profitable au plus grand nombre, et dans la logique de mon travail.\\
+J'ai hiérarchisé mon ouvrage de façon chronologique. Les parties sont rangées dans l'ordre "d'apparition" en MP, tout en concervant une certaine logique dans les parties. J'ai mis en Annexe des petites fiches de méthodologie, qui peuvent s'avérer utiles.\\
+Je vous souhaite une bonne lecture, et surtout une bonne réussite.\\
+Jean-Baptiste Théou
+\chapter{Remerciements}
+Je tient à remercier Georges Marin, Professeur de Physique-Chimie en MP au Lycée Lesage et François Brunou, Professeur de Mathématiques en MP au Lycée Lesage.\\
+Sans eux, ce livre ne pourrai exister.\\
+\mainmatter                   % On passe aux choses serieuses
+\part{Electricité}
+\setcounter{chapter}{0}
+\include{Physique/fonctiondetransfert} % Relue, correction orthographe
+\include{Physique/analysedunsignal} % Relue, correction orthographe
+\part{Electrostatique et Electrocinétique}
+\setcounter{chapter}{0}
+\include{Physique/formelocaledelectrostatique} % Relue, correction orthographe
+\include{Physique/conducteurelectriquenequilibre} % Relue, correction orthographe
+\include{Physique/complementelectrostatique}  % Relue, correction orthographe
+\part{Thermodynamique}
+\setcounter{chapter}{0}
+\include{Physique/termo}
+\include{Physique/potentielchimique}
+\include{Physique/melangebinaire}
+\include{Physique/grandeurtermochimiquestandard}
+\include{Physique/equilibrechimique}
+\include{Physique/diagrammedelligham}
+\include{Physique/transfertthermique}
+\part{Magnétostatique}
+\setcounter{chapter}{0}
+\include{Physique/magnetostatique}
+\part{Electromagnétisme}
+\setcounter{chapter}{0}
+\include{Physique/effethall}
+\include{Physique/inductionelectromagnetique}
+\include{Physique/equationdemaxwell}
+\include{Physique/Regimequasistationnaire}
+\part{Onde Electromagnétique}
+\setcounter{chapter}{0}
+\include{Physique/ondeelectromatique}
+\include{Physique/propagationdoneplane}
+\include{Physique/ondeelectromagconfine}
+\include{Physique/energieelectromagnetique}
+\part{Mécanique}
+\setcounter{chapter}{0}
+\include{Physique/mecaniquedusolide}
+\part{Optique physique}
+\setcounter{chapter}{0}
+\include{Physique/lalumiere}
+\include{Physique/Interference}
+\include{Physique/michelson}
+\include{Physique/diffraction}
+\include{Physique/reseau}
+\part{Chimie}
+\setcounter{chapter}{0}
+\include{Physique/diagrammepotentielph}
+\include{Physique/corrosion}
+\include{Physique/cristalographie}
+\appendix
+\part{Annexe}
+\include{Physique/analysevectoriel}
+\backmatter
+\tableofcontents            % Table des matières
+\end{document}

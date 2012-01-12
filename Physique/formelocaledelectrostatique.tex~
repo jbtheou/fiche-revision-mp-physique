@@ -1,0 +1,106 @@
+\chapter{Forme locale de l'électrostatique}
+\section{Champs électrique}
+\subsection{Définitions}
+\begin{de}
+Soit E une application :
+$$E : M \mapsto \overrightarrow{E}(M)$$
+Si en un point M, on place une charge $q_0$, cette charge subit une force $\overrightarrow{f}$.\\
+On défini donc le champs électrique par : 
+$$\overrightarrow{E} = \dfrac{\overrightarrow{f}}{q_0}$$
+On observe donc que le champs électrique est indépendant de la charge $q_0$. On obtient donc qu'en introduisant un champs, on se libère du point d'observation.
+\end{de}
+\subsubsection{Loi de Coulomb}
+\begin{de}
+Soit A($q_1$) un point matériel de charge $q_1$, B($q_2$), un point matériel de charge $q_2$. La force exercé de A sur B est donnée par, avec $r = \parallel\overrightarrow{AB}\parallel$ : 
+$$\overrightarrow{f} = \dfrac{q_1.q_2}{4\pi\varepsilon_0.r^2}.\dfrac{\overrightarrow{AB}}{AB}$$
+Avec : 
+$$\dfrac{1}{4\pi\varepsilon_0} = 9.10^9$$.
+On en déduit : 
+$$\overrightarrow{E}(M) = \dfrac{1}{4\pi\varepsilon_0.r^2}.\dfrac{q.\overrightarrow{AB}}{AB}$$
+\end{de}
+\subsubsection{Calcul direct du champs}
+Considérons un volume chargée.\\
+Considérons une charge élémentaire dans ce volume, notée dq : 
+$$dq = \rho.dv$$
+Avec $\rho$ la densité volumique de charge de ce volume, et $dv$ le volume élémentaire contenant cette charge dq.\\
+Soit M un point de l'espace, et P un point appartenant à dq.
+On obtient : 
+$$\overrightarrow{E}(M) = \dfrac{1}{4\pi\varepsilon_0}\underset{source}\iiint \dfrac{\rho.\overrightarrow{PM}}{PM^3}.dv$$
+\section{Potentiel électrique}
+\begin{de}
+En partant de l'expression de la force déterminer dans le paragraphe à propos de la loi de coulomb : 
+$$\overrightarrow{f} = \dfrac{q_1.q_2}{4\pi\varepsilon_0.r^2}.\dfrac{\overrightarrow{OM}}{OM}$$
+On obtient que, avec : 
+$$\delta \omega = \overrightarrow{f}.\overrightarrow{dm}$$
+$$\overrightarrow{OM} = r.\overrightarrow{u_r}$$
+$$\overrightarrow{dm}=dr.\overrightarrow{u_r}+r.d\theta.\overrightarrow{u_{\theta}}+r.sin(\theta)d\varphi.\overrightarrow{u_{\varphi}}$$
+Donc : 
+$$\delta \omega = -\dfrac{d}{dr}(\dfrac{q.q'.r}{4\pi\varepsilon_0})$$
+On peut donc introduire une énergie potentielle (au sens mécanique du terme).
+$$E_p = q'.\dfrac{q}{4.\pi.\varepsilon_0.r} = q'.V(m)$$
+D'ou :
+$$\overrightarrow{E}(M).\overrightarrow{dm} = -dV$$
+On peut écrire cette relation sous la forme : 
+$$\overrightarrow{E}(M) = -\overrightarrow{grad}V$$
+En partant de l'expression du grandiant de V et de l'expression $\overrightarrow{dm}$ dans un système de coordonnée, on peut déterminer l'expression du champs électrique.
+\end{de}
+\subsection{Calcul direct du potentiel}
+\begin{de}
+Considérons un volume chargé, de densité volumique de charge $\rho$.\\
+Considérons un volume élémentaire dv, avec P appartenant à dv, et M un point de l'espace :
+$$V(M) = \underset{V charge}\iiint \dfrac{\rho.dv}{4\pi\varepsilon_0.PM}$$
+\end{de}
+\subsection{Condition pour qu'un champs de vecteurs soit un gradiant}
+Soit $\overrightarrow{D}(M)$ un champs de vecteur.\\
+Soit $\overrightarrow{rot}(\overrightarrow{D})$, le rotationnel de D, défini par : 
+$$\overrightarrow{rot}\overrightarrow{D} = (\dfrac{\partial D_z}{\partial y}-\dfrac{\partial D_y}{\partial z};\dfrac{\partial D_x}{\partial z}-\dfrac{\partial D_z}{\partial x};\dfrac{\partial D_y}{\partial x}-\dfrac{\partial D_x}{\partial y})$$
+Si $\overrightarrow{rot}(\overrightarrow{D}) = \overrightarrow{0}$, alors :
+$$\exists g~ tq~ \overrightarrow{D}(M) = \overrightarrow{grad}(f)$$
+\subsection{Lien entre direction de champs et surface equipotentielle}
+\begin{prop}
+$\overrightarrow{E}(M)$ sera parralèle à la surface équipotentielle V(M), avec $\overrightarrow{E}(M)$ dirige vers les potentiels décroissants
+\end{prop}
+\section{Théorème de Gauss}
+\begin{enon}
+Le flux du champ électrique à travers une surface fermé $\Sigma$ orienté vers l'extérieur est égale à la charge intérieur à cette surface sur la permitivité du vide, $\varepsilon_0$ : 
+$$\phi = \underset{\Sigma}\oiint \overrightarrow{E}.\overrightarrow{n}.dS = \dfrac{Q_{int}}{\varepsilon_0}$$
+\end{enon}
+\begin{prop}
+D'après le théorème de Gauss, on peut déduire que le potentiel ne peut pas être extremum au niveau d'un point vide de charge.
+\end{prop}
+\subsection{Forme locale du théorème de Gauss}
+\subsubsection{Opérateur Divergence}
+\begin{de}
+On défini l'opérateur divergence, notée div, par : 
+$$div : \Re^3 \rightarrow \Re$$
+$$\overrightarrow{D} \mapsto div(\overrightarrow{D})$$
+Supposons que $\overrightarrow{D}(x,y,z)$, alors :
+$$div(\overrightarrow{D}) = \dfrac{\partial D_x}{\partial x} + \dfrac{\partial D_y}{\partial y} + \dfrac{\partial D_z}{\partial z}$$
+\end{de}
+\begin{prop}
+Considérons une surface fermé $\Sigma$, de volume intérieur chargé V : 
+$$\phi = \underset{\Sigma}\piint\overrightarrow{E}(M).\overrightarrow{n}.dS = \underset{V}\iiint div(\overrightarrow{E}).dV$$
+\end{prop}
+\subsection{Équation de Poisson}
+\subsubsection{Opérateur Laplacien}
+\begin{de}
+On défini l'opérateur Laplacien, noté $\Delta$, par : 
+$$\Delta : \Re \rightarrow \Re$$
+$$A \mapsto \Delta(A)$$
+Avec : 
+$$\Delta(A) = \dfrac{\partial^2 A}{\partial^2 x} + \dfrac{\partial^2 A}{\partial^2 y} + \dfrac{\partial^2 A}{\partial^2 z}$$ 
+\end{de}
+\subsubsection{Énoncé}
+Considérons une surface fermé, $\Sigma$, de densité volumique de charge $\rho$, de volume chargé V.\\
+D'après le théorème de Gauss, on obtient que : 
+$$\phi = \underset{\Sigma}\oiint\overrightarrow{E}(M).\overrightarrow{n}.dS = \underset{V}\iiint \dfrac{\rho.dV}{\varepsilon_0} = \underset{V}\iiint div(\overrightarrow{E}).dV$$
+On en déduit donc le relation locale suivante, qui dépend du point M :
+$$\dfrac{\rho}{\varepsilon_0} = div(\overrightarrow{E})$$
+Or, par définition : 
+$$\overrightarrow{E} = -\overrightarrow{grad}(V)$$
+On obtient donc que : 
+$$div(\overrightarrow{E}) = -\Delta(V)$$
+Avec $\Delta(V)$ le Laplacien de V.\\
+On obtient donc que : 
+$$\dfrac{\rho}{\varepsilon_0} = -\Delta V$$
+Ceci constitue l'équation de poisson.

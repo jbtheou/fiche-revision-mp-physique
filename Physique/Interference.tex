@@ -1,0 +1,92 @@
+\chapter{Interférence non localisées de deux ondes}
+\section{Superposition de deux ondes sphérique progressive monochromatique}
+\subsection{Calcul de l'éclairement}
+Considérons un point M, et deux sources $S_1$ et $S_2$ séparé respectivement de $r_1$ et $r_2$ de M. Ce sont deux sources monochromatique sphérique de pulsation $\omega$.\\
+En M, nous avons : 
+$$\varphi_1 = \dfrac{A}{r_1}cos(\omega.t - \omega.\dfrac{r_1}{c})$$
+$$\varphi_1 = \dfrac{A}{r_2}cos(\omega.t - \omega.\dfrac{r_2}{c} + \theta)$$
+Considérons E, l'éclairement, défini par :
+$$E = |\varphi|^2$$
+En passant en notation complexe, on obtient : 
+$$E = \dfrac{A^2}{r_1^2}(1 + \dfrac{B^2}{A^2}.\dfrac{r_1^2}{r_2^2} + 2.\dfrac{B}{A}.\dfrac{r_1}{r_2}.cos(\dfrac{2.\pi}{\lambda}(r_2-r_1) - \theta))$$
+On montre que : 
+\begin{itemize}
+ \item[$\rightarrow$] cos($\dfrac{2\pi}{\lambda}(r_2-r_1)$) varie extremement rapidement
+ \item[$\rightarrow$] $\dfrac{r_1}{r_2}$ varie très lentement par rapport au cos
+\end{itemize}
+On peut donc fair l'approximation suivante :
+$$\dfrac{r_1}{r_2} = cte$$
+On obtient donc une expression de la forme : 
+$$E = \dfrac{A^2}{r_1^2}(1 + \alpha^2 + 2.\alpha.cos(\dfrac{2.\pi}{\lambda}(r_2-r_1) - \theta))$$
+\subsection{Franges d'interférences}
+\subsubsection{Natures}
+D'après l'expression précédente, on obtient que E varie d'un minimum vers un maxium periodiquement, avec un periode spatiale de $\lambda$. D'apres la considération que : 
+$$S_2M - S_1M = cte$$
+On obtient que les franges d'interférences sont des hyperbolides.
+\subsubsection{Intersection des franges d'interférence par un plan parallèle au segment $S_1S_2$}.
+Soit a la distance séparant $S_1$ et $S_2$, D la distance entre le segment $S_1S_2$ et le plan contenant M, et M le point défini par : 
+$$M = \begin{pmatrix}
+       X \\
+       Y \\
+       D \\
+      \end{pmatrix}
+$$
+En faisant les approximations suivantes, appelé approximation axiale : 
+$$a \ll D$$
+$$X \ll D$$
+$$Y \ll D$$
+On montre que :
+$$S_2M - S_1M = \dfrac{-a.X}{D}$$
+On obtient donc une dépendance linéaire entre X et l'éclairement
+\subsubsection{Intersection des franges d'interférence par un plan perpendiculaire au segment $S_1S_2$}
+Soit D la distance entre $S_1$ et l'origine O, a la distance entre $S_1$ et $S_2$, $\rho$ la distance entre M et l'origine. M est porté par Ox et $S_1$ et $S_2$ porté par Oy.\\
+En faisant l'approxiation axiale, on obtient : 
+$$S_2M - S_1M = a.(1 - \dfrac{\rho^2}{2.D^2})$$
+On obtient donc une dépendance quadratique.
+\section{Dispositif diviseur d'onde}
+\subsection{Impossibilité de deux sources cohérentes}
+On ne peut pas obtenir, dans la durée, deux sources synchronisées l'une sur l'autre, c'est à dire avec $\theta$ indépendant du temps. Partant de ce constat, nous avons plusieurs moyens d'obtenir deux sources virtuels cohérente, à partir d'une source.
+\subsection{Miroir de Fresnel}
+Considérons deux mirroirs $M_1$ et $M_2$, lié, avec $M_2$ forment un angle $\alpha$ faible avec $M_1$. On montre que la source se réféchi sur les deux miroirs, ce qui permet d'obtenir des figures d'interférence, les support de rayon se croisant. On obtient donc, à l'aide de ces deux mirroirs, deux sources virtuels syncrones.
+\section{Conditions de visibilité des franges - Cohérence}
+\subsection{Cohérence temporelle d'une sources}
+\subsubsection{Durée d'un train d'ondes}
+La lumière émise par une lampe spectrale est dù au dé-excitation d'atomes. Soit $\tau$ la durée d'émission du à un atome. On montre que l'on observe des interférences si : 
+$$r_2 - r_1 < c.\tau$$
+On appelle longeur de cohérence, notée $\delta$ : 
+$$\delta = c.\tau$$ 
+Cette condition permet de déterminer la taille observable de la figure d'interférence.
+\subsubsection{Largeur spectrale des raies d'émission}
+Considérons un paquet d'onde, c'est à dire un signal sinusoidale borné. On montre que ce signal peut être décomposé sous la forme : 
+$$s(t) = \int_0^{\infty} g(\nu).e^{i.2\pi.\nu.t}dt$$
+La sources n'est donc absolumement pas monochromatique. On peut approximer la courbe, qui est une courbe en cloche, par un "rectangle". En considérant un $d\nu$ de la distribution, et en déterminant l'éclairement, on obtient encore une restriction sur le nombre de franges d'interférence visible. Soit p le nombre de franges visible : 
+$$p = \dfrac{\lambda_2}{\lambda_2-\lambda_1}$$
+Avec $\lambda_2 - \lambda_1$ la largeur de la cloche et $\lambda_2$ une longeur d'onde de la cloche.\\
+En intégrant l'élément différentielle de E déterminé précédement, entre deux fréquences, on obtient une porteuse, qui module un signal.
+\subsubsection{Contraste}
+Par définition, on appelle contraste, noté $\gamma$ : 
+$$\gamma = \dfrac{E_{max} - E_{min}}{E_{max} + E_{min}}$$
+Avec $E_{max}$ l'éclairement maximale, $E_{min}$ l'éclairement minimale.\\
+On montre que des que l'on s'écarte un peu du centre de la figure d'interférence, le contraste devient très faible. On ne peut donc diserner qu'un très petit nombres de franges. Cependant, l'oeil est aussi sensible au couleur, ce qui nous permet de disernet un nombres plus important de franges qu'un capteur par exemple.
+\subsection{Interférences à grande différence de marche}
+On suppose dans ce cas que :
+$$E(x) = cte$$
+\begin{de}
+On appelle différence de marche la différence : 
+$$r_2 - r_1$$
+\end{de}
+On observe le mieux les franges d'interférence quand la différence de marche est nulle, c'est à dire quand on se trouve sur la médiatrice entre les deux sources virtuels dans le cas des mirroirs de Fresnel. Pour une longeur d'onde donnée, en fixant le point M dans le cas d'une grande différence de marche, on obtient, en simplifiant l'expression de l'éclairement 
+$$E(\lambda) = K.(1 + cos(\dfrac{2.\pi.a.X_0}{\lambda.D}))$$
+On obtient que le maximum de l'éclairement est atteint pour certaine longeurs d'onde : 
+$$\lambda = \dfrac{2.a.X_0}{D(2p+1)}$$
+On obtient que plus p augment, plus les longeurs d'ondes entrainent un éclairement maximum sont proche.
+\subsection{Cohérence spatiale d'une expérience d'interférence}
+\subsubsection{Extension spatiale de la source}
+Une source ponctuelle ne peut pas être réalisé en réalité. Toute source à une épaisseur. Notons b cette largeur. On obtient donc que les franges d'interférences ne sont pas sans dimensions. Pour pouvoir voir les franges d'interférences, il faut donc que l'épaisseur soit bien inférieur à l'interfranges. On obtient donc qu'il faut que : 
+$$b < \dfrac{\lambda.D}{4.a}$$
+Ceci est une condition contraignante, car la largeur de la source doit être de l'ordre de la 100 de $\mu m$.
+\subsubsection{Calcul de l'éclairement}
+En considérant un élement différentielle d'éclairement, on obtient que : 
+$$E = K.b(1+\dfrac{sin(\dfrac{\pi.a.b}{\lambda.D})}{\dfrac{\pi.a.b}{\lambda.D}}.cos(\dfrac{2\pi.a.X}{\lambda.D}))$$
+\subsubsection{Largeur maximale de la fente source}
+D'après l'expression du contraste, on ne peut observer les interférences que si le contraste est suffisament important, c'est à dire qu'un obtient un constaste seuil, donc un b maximale.

@@ -1,0 +1,104 @@
+
+\chapter{Actions électromagnétique exercées sur un circuit}
+\section{Effet Hall}
+\begin{de}
+Considérons un conducteur, par exemple un pavé, dans lequel se déplace des particules chargée selon la vitesse :
+$$\overrightarrow{v}=v.\overrightarrow{u_x}$$
+Supposons l'existance d'un champs magnétique portée par $\overrightarrow{u_y}$, orienté selon l'axe Oy. Nous savons qu'une particule chargée subit la force de Lorentz : 
+$$\overrightarrow{f} = q.\overrightarrow{E}+q.\overrightarrow{v}\wedge\overrightarrow{B}$$
+Sous l'action du champs magnétique, on observe la créaction d'un champs électrique, du à la disymétrie des charges dans le conducteur.\\
+On obtient donc qu'il y a création d'une différence de potentiel, et que la force de Lorentz tend vers un équilibre.\\
+On en déduit donc que le champs éléctrique du à l'action du champs magnétique est égale à : 
+$$\overrightarrow{E} = -\overrightarrow{v}\wedge\overrightarrow{B}$$
+D'ou : 
+$$U = v.B.d$$
+Or de plus : 
+$$\overrightarrow{j} = \rho_{mob}.\overrightarrow{v}$$
+$$i = \iint \overrightarrow{j}.\overrightarrow{n}.dS = j.dS$$
+On obtient donc la formule de l'effet Hall : 
+$$U = \dfrac{I.d.B}{S.\rho_{mob}}$$
+Avec $\rho_{mob}$ la densité de charge des charges en mouvement.
+\end{de}
+\section{Force de Laplace}
+\subsection{Expression}
+\begin{de}
+La force de Laplace est la force magnétique exercé sur un circuit.\\
+Considérons un conducteur parcours par un courant. Les charges en mouvement subissent la force de Lorentz, donnée par :
+$$\overrightarrow{f}=q.\overrightarrow{v}\wedge\overrightarrow{B}$$
+Comme vu précédent, il apparait un champs magnétique d'expression : 
+$$\overrightarrow{E}=-\overrightarrow{v}\wedge\overrightarrow{B}$$
+Mais le conducteur contient aussi des charges fixes. Ces charges subissent le nouveau champs électrique à travers la force de Lorentz électrique.\\
+Considérons un élément $\overrightarrow{dl}$ du conducteur : 
+$$d\overrightarrow{F}=\Sigma q_f.\overrightarrow{E} = -\rho_{fixe}.\overrightarrow{V}.dS.dl\wedge\overrightarrow{B}$$
+De plus, nous avons les relations suivantes : 
+$$\rho_{fixe}+\rho_{mob} = 0$$
+$$\overrightarrow{j} = \rho_{mob}.\overrightarrow{v}$$
+$$i = j.dS$$
+On obtient donc l'expression de la force de Laplace : 
+$$d\overrightarrow{F} = i.\overrightarrow{dl}\wedge\overrightarrow{B}$$
+Dans le cas d'un distribution volumique de courant, on obtient : 
+$$d\overrightarrow{F} = dV.\overrightarrow{j}\wedge\overrightarrow{B}$$
+\end{de}
+\subsection{Définitions légale de l'Ampère}
+\begin{de}
+Considérons deux fils parcourus par un même courant (sens opposé).\\
+Par application du théorème d'Ampère, à l'aide de symétrie, et de la force de laplace, on obtient que :
+$$d\overrightarrow{F} = \dfrac{\mu_0.i^2.dl}{2.\pi.r}.\overrightarrow{u_r}$$
+Cette relation constitue la définition légale de l'Ampère. À l'aide de la force, on peut définir i = 1 A
+\end{de}
+\section{Torseur des forces exercées sur un circuit}
+\subsection{Energie d'interaction entre le champ et un circuit}
+\subsubsection{Travail des forces de Laplace}
+Considérons une portion de circuit $\overrightarrow{dl}$ qui, sous l'action d'un champ magnétique, effectue une translation de $\overrightarrow{d\lambda}$.\\
+Par définition du travail d'une force, le travail de la force de Laplace $d\overrightarrow{F}$ est donnée par : 
+$$\delta W = d\overrightarrow{F}.\overrightarrow{d\lambda}$$
+On obtient que :
+$$W = i \Phi_C$$
+Avec $\Phi_C$ le flux coupé défini par : 
+$$\Phi_C = dS.\overrightarrow{n}.\overrightarrow{B}$$
+En explicitant ce flux coupé, on obtient que :
+$$W = i.\Delta \Phi$$
+Avec $\Phi$ le flux propre du circuit, c'est à dire le flux qui traverse le circuit. Ce flux est donc défini par rapport au circuit.
+\subsubsection{Energie d'interaction électromagnétique}
+On observe que le travail ne dépend que du point de départ et du point d'arrivé.\\
+On peut mettre le $\Delta \Phi$ sous forme d'une différence d'energie potentiel : 
+$$W = E_{p1} - E_{p_2}$$
+Avec $E_{pX} = -i.\Phi_X$
+\subsection{Dipole magnétique dans un champs magnétique uniforme}
+\subsubsection{Mouvement de Translation}
+\begin{prop}
+Considérons un dipole magnétique qui, sous l'action d'un champs magnétique uniforme, subit une translation $\overrightarrow{d\lambda}$.\\
+On obtient que :
+$$\delta W = i.\Delta \Phi = i.(\Phi_2-\Phi_1) = 0$$
+Avec les deux surfaces sont identiquement orienté et parcours par le meme courant, donc la variation de flux propre est nul. De plus, par définition : 
+$$\delta W = \overrightarrow{R}.\overrightarrow{dl}$$
+Donc la résultante du champs magnétique est nul.
+\end{prop}
+\subsubsection{Mouvement de Rotation}
+\begin{prop}
+De la même façon, mais cette fois ci en considérant un mouvement de rotation, on obtient que : 
+$$\overrightarrow{\mathcal{M}} = - \overrightarrow{M}\wedge \overrightarrow{B}$$
+Avec $\mathcal{M}$ le moment des forces, et $\overrightarrow{M}$ le moment magnétique.
+\end{prop}
+\subsection{Dipole magnétique dans un champs magnétique non-uniforme}
+\begin{prop}
+L'expression du moment des forces reste identique :
+$$\overrightarrow{\mathcal{M}} = - \overrightarrow{M}\wedge \overrightarrow{B}$$
+Par contre, nous obtenons maitenant, pour l'expression de la résultante de la force, en considérons que le moment des forces $\overrightarrow{\mathcal{M}}$ est constant (Mouvement de translation) :
+$$\overrightarrow{R} = \overrightarrow{grad}(\overrightarrow{M}.\overrightarrow{B})$$
+\end{prop}
+\subsection{Analogie entre dipole magnétique et dipole électrique}
+\subsubsection{Dipole magnétique}
+\begin{itemize}
+ \item[$\rightarrow$] Moment magnétique : $\overrightarrow{M} = i.S.\overrightarrow{n}$
+ \item[$\rightarrow$] Energie potentiel : $E_p = -\overrightarrow{M}.\overrightarrow{B}$
+ \item[$\rightarrow$] Moment des forces : $\mathcal{M} = - \overrightarrow{M}\wedge\overrightarrow{B}$
+ \item[$\rightarrow$] Résultante des forces : $\overrightarrow{R} = \overrightarrow{grad}(\overrightarrow{M}.\overrightarrow{B})$
+\end{itemize}
+\subsubsection{Dipole électrique}
+\begin{itemize}
+ \item[$\rightarrow$] Moment dipolaire : $\overrightarrow{P} = q.\overrightarrow{AB}$
+ \item[$\rightarrow$] Energie potentiel : $E_p = -\overrightarrow{P}.\overrightarrow{E}$
+ \item[$\rightarrow$] Moment des forces : $\mathcal{M} = - \overrightarrow{P}\wedge\overrightarrow{E}$
+ \item[$\rightarrow$] Résultante des forces : $\overrightarrow{R} = \overrightarrow{grad}(\overrightarrow{P}.\overrightarrow{E})$
+\end{itemize}

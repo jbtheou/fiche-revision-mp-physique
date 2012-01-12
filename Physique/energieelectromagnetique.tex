@@ -1,0 +1,59 @@
+\chapter{\'Energie Electrostatique}
+\section{\'Energie d'une charge dans un champs électrique exterieur}
+Soit M(q) une charge. On peut écrire l'énergie potentielle d'interaction de la charge q avec le champ exterieur sous la forme : 
+$$E_p = q.V(M)$$
+Avec V(M) le potentiel crée par les charges exterieurs.
+\section{\'Energie électrique d'un système de charges fixes}
+Soit A($q_A$) et B($q_B$) deux charges. On montre que l'on peut écrire l'énergie potentielle de deux charges sous la forme : 
+$$E_p = \dfrac{q_A.q_B}{4\pi\varepsilon_0.r_{ab}}$$
+Avec $r_{ab}$ la distance entre les charges A et B.
+\subsection{Cas d'un ensemble de N charges}
+Considérons le cas de n charges. On peut écrire l'énergie potentielle sous la forme : 
+$$E_p = \dfrac{1}{2}\sum_i q_i.V_i$$
+En notant $V_i$ le potentiel électrostatique crée par les charges autres que i au point $M_i$, occupé par la charge $q_i$.
+\subsection{Généralisation}
+On peut généraliser ceci à une distribution continue de charges, en écrivant l'énergie potentielle d'interaction sous la forme : 
+$$E_p = \dfrac{1}{2}.\iiint \rho.V.d\tau$$
+Avec $d\tau$ un élément de volume et et V le potentiel.
+\section{Densité d'énergie électrostatique}
+En partant de l'expression de l'énergie potentielle sous forme intégrale, et d'après le théorème de Gauss, on obtient que : 
+$$E_p = \dfrac{1}{2}.\iiint \rho.V.d\tau = \dfrac{1}{2}.\iiint \varepsilon_0.E^2.d\tau$$
+Il faut bien notée que le domaine d'integration n'est pas le même. Pour la première intégrale, on intègre sur l'espace où $\rho \neq 0$. Pour la seconde, on intègre sur l'espace tout entier. On peut donc introduire une densité volumique d'énergie, donnée par : 
+$$\dfrac{1}{2}.\varepsilon_0.E^2$$
+\section{\'Energie Magnétique et Électromagnétique}
+\subsection{Densité volumique d'énergie magnétique}
+De façon analogue à précédement, on montre que : 
+$$E =\iiint \dfrac{B^2}{2.\mu_0}dv$$
+On montre bien que l'énergie est réparti de façon uniforme dans tout l'espace, avec un densité volumique de :
+$$\dfrac{B^2}{2.\mu_0}$$
+\subsection{Bilan d'énergie dans un volume élémentaire}
+On postule l'existence d'une densité volumique d'énergie u telle que l'énergie électromagnétique d'un système puisse s'écrire :
+$$\overrightarrow{E} = \iiint \overrightarrow{u}.dv$$
+De même, on postule qu'il existe un vecteur densité de flux de puissance, noté $\Pi$, telque : 
+$$\overrightarrow{P} = \iint \Pi.\overrightarrow{n}.dS$$
+On montre que : 
+$$\dfrac{\partial u}{\partial t} + div(\overrightarrow{\Pi}) + \overrightarrow{J}.\overrightarrow{E} = 0$$
+Ceci constitue le bilan d'énergie dans un volume élémentaire.
+\subsection{Vecteur de Poynting}
+On montre que $\overrightarrow{\Pi}$, appelé vecteur de Poynting, a pour expression : 
+$$\overrightarrow{\Pi} = \dfrac{\overrightarrow{E}\wedge\overrightarrow{B}}{\mu_0}$$
+On montre que ce vecteur donne la direction dans lequel se transfert l'énergie.
+\section{L'essentiel}
+Nous devons retenir les choses suivantes : 
+\subsection{\'Equation de Maxwell}
+\begin{itemize}
+ \item[$\rightarrow$] $div(\overrightarrow{B}) = 0$
+ \item[$\rightarrow$] $\overrightarrow{rot}(\overrightarrow{E}) = \dfrac{-\partial\overrightarrow{B}}{\partial t}$
+ \item[$\rightarrow$] $div(\overrightarrow{E}) = \dfrac{\rho}{\varepsilon_0}$
+ \item[$\rightarrow$] $\overrightarrow{rot}(\overrightarrow{B}) = \mu_0.\overrightarrow{j}+\varepsilon_0.\mu_0.\dfrac{\partial \overrightarrow{E}}{\partial t}$
+\end{itemize}
+\subsection{Force de Lorentz}
+Une charge q plongé dans un champs $(\overrightarrow{E},\overrightarrow{B})$ subit la force suivante : 
+$$\overrightarrow{f} = q.(\overrightarrow{E} + \overrightarrow{v}\wedge\overrightarrow{B})$$
+\subsection{Autres expressions}
+Les deux relations suivantes : 
+\begin{itemize}
+ \item[$\rightarrow$] $u = \dfrac{\varepsilon_0.E^2}{2} + \dfrac{B^2}{2.\mu_0}$
+ \item[$\rightarrow$] $\overrightarrow{\Pi} = \dfrac{\overrightarrow{E}\wedge\overrightarrow{B}}{\mu_0}$ 
+\end{itemize}
+Avec toutes ces expressions, on redémontre l'ensemble des lois de l'électromagnétisme.

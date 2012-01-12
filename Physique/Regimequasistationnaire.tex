@@ -1,0 +1,54 @@
+\chapter{Régime quasi-stationnaire}
+\section{Approximation des régimes quasi-stationnaire}
+\subsection{Définitions}
+Nous avons les relations suivantes :\\ 
+\begin{itemize}
+ \item[$\rightarrow$] $\Delta(V) - \dfrac{1}{c^2}.\dfrac{\delta^2 V}{\delta t^2} = \dfrac{-\rho}{\varepsilon_0}$\\
+ \item[$\rightarrow$] $\overrightarrow{\Delta(\overrightarrow{A})} - \dfrac{1}{c^2}.\dfrac{\partial^2 \overrightarrow{A}}{\partial t^2} = -\mu_0.\overrightarrow{j}$\\
+\end{itemize}
+On montre que l'on peut faire l'approximation des régimes quasi-stationnaires si : 
+$$d \ll c.\tau$$
+Avec d une distance caratéristique et $\tau$ un temps caractéristique.
+\subsection{Approximation du régime quasi-stationnaire électrique}
+On a :
+$$\overrightarrow{E} = - \overrightarrow{grad}(V) - \dfrac{\partial \overrightarrow{A}}{\partial t}$$
+On fait l'approximation du régime quasi-stationnaire électrique si : 
+$$\parallel \overrightarrow{j} \parallel \ll \rho.c$$
+Dans ce cas, on peut écrire : 
+$$\overrightarrow{E} = - \overrightarrow{grad}(V)$$
+Ceci modifie les équations de Maxwell, car on obtient :
+$$\overrightarrow{rot}(\overrightarrow{E}) = \overrightarrow{0}$$
+\subsection{Approximation du régime quasi-stationnaire magnétique}
+On a : 
+$$\overrightarrow{rot}(\overrightarrow{B}) = \mu_0.\overrightarrow{j}+\varepsilon_0.\mu_0.\dfrac{\partial \overrightarrow{E}}{\partial t}$$
+On fait l'approximation du régime quasi-stationnaire magnétique, si : 
+$$\parallel \varepsilon_0.\mu_0.\dfrac{\partial \overrightarrow{E}}{\partial t} \parallel \ll \parallel \overrightarrow{j}\parallel$$
+Dans ce cas, on obtient donc que : 
+$$\overrightarrow{rot}(\overrightarrow{B}) = \mu_0.\overrightarrow{j}$$
+\section{Cas des conducteurs ohmique}
+\subsection{Loi d'ohm}
+Un conducteur vérifie la loi d'ohm si :
+$$\overrightarrow{j} = \gamma.\overrightarrow{E}$$
+$$\overrightarrow{j} = \rho_m.<\overrightarrow{v}>$$
+Avec $<\overrightarrow{v}>$ la valeur moyenne de la vitesse et $\rho_m$ la densité de charge mobile.
+\subsection{Densité volumique de charge}
+La conservation de la charge est donnée par la relation : 
+$$div(\overrightarrow{j}) + \dfrac{\partial \rho}{\partial t} = 0$$
+On montre que la densité de charge peut se mettre sous la forme : 
+$$\rho = \rho_0.e^{-\dfrac{\gamma}{\varepsilon_0}.t}$$
+On montre que la densité de charge devient nul en un temps extremement court, de l'ordre de $10^{-11}$ pour le cuivre par exemple.
+\subsection{Cas du régime sinusoïdale}
+Dans le cas sinosoïdale, on montre qu'on peut considérer qu'on est en régime quasi stationnaire si : 
+$$f \ll \dfrac{1}{2.\Pi.\tau}$$
+\subsection{Interface conducteur-vide}
+\subsubsection{Densité de courant}
+Dans le cas d'un fil, dans un régime statique, le vecteur densité $\overrightarrow{j}$ à la surface du fil est tangent, car autrement, il y aurait accumulation de charge.\\
+Dans le cas du régime variable, on montre que $\overrightarrow{j}$ n'est pas forcement tangent à la surface.
+\subsection{Cas du conducteur parfait}
+\subsubsection{Définitions}
+On dit d'un conducteur qu'il est parfait si :
+$$\gamma \rightarrow + \infty$$
+Avec :
+$$\overrightarrow{j} = \gamma.\overrightarrow{E}$$
+\subsubsection{Champs électrique à l'interieur du conducteur}
+On montre que dans un conducteur, le courant passe à la surface. Ceci est appelé effet de peau

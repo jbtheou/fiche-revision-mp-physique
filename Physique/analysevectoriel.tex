@@ -1,0 +1,118 @@
+
+\chapter{Analyse Vectorielle}
+\section{Opérateur}
+\subsection{Opérateur gradient}
+\begin{de}
+L'opérateur gradient est défini par :
+$$df = \overrightarrow{grad}(f).\overrightarrow{dl}$$
+Un moyen pour retenir les expressions suivant est de penser qu'on divise les dérivées par les éléments non différentiel dans l'expression du $\overrightarrow{dl}$, dans le système de coordonnée considéré. Par exemple, en cylindrique : 
+$$\overrightarrow{dl} = dr.\overrightarrow{u_r}+r.d\theta.\overrightarrow{u_{\theta}}+dz.\overrightarrow{u_z}$$
+On divise donc la coordonnée du gradient selon $u_{\theta}$ par r.
+\end{de}
+\subsubsection{En coordonnées cartesienne}
+\[ \overrightarrow{grad}(f) = \left|
+ \begin{array}{*{4}{c}}
+\dfrac{\partial f}{\partial x}\\
+ 			      \\
+\dfrac{\partial f}{\partial y}\\
+			      \\
+\dfrac{\partial f}{\partial z}\\
+\end{array} \right. \]
+\subsubsection{En coordonée cylindrique}
+\[ \overrightarrow{grad}(f) = \left|
+ \begin{array}{*{4}{c}}
+\dfrac{\partial f}{\partial r}\\
+ 			      \\
+\dfrac{1}{r}.\dfrac{\partial f}{\partial \theta}\\
+			      \\
+\dfrac{\partial f}{\partial z}\\
+\end{array} \right. \]
+\subsubsection{En coordonnée sphérique}
+\[ \overrightarrow{grad}(f) = \left|
+ \begin{array}{*{4}{c}}
+\dfrac{\partial f}{\partial r}\\
+ 			      \\
+\dfrac{1}{r}.\dfrac{\partial f}{\partial \theta}\\
+			      \\
+\dfrac{1}{r.sin(\theta)}\dfrac{\partial f}{\partial \varphi}\\
+\end{array} \right. \]
+\subsection{Opérateur Divergence}
+\subsubsection{En coordonée cartesienne}
+$$div(\overrightarrow{D}) = \dfrac{\partial (\overrightarrow{D}.\overrightarrow{u_x})}{\partial x} + \dfrac{\partial (\overrightarrow{D}.\overrightarrow{u_y})}{\partial y} + \dfrac{\partial (\overrightarrow{D}.\overrightarrow{u_z})}{\partial z}$$
+\subsection{Opérateur Laplacien scalaire}
+\begin{de}
+On défini le Laplacien scalaire par : 
+$$\Delta f = div(\overrightarrow{grad}(f))$$
+\end{de}
+\subsubsection{En coordonnée cartesienne}
+$$\Delta f = \dfrac{\partial^2 f}{\partial x^2} + \dfrac{\partial^2 f}{\partial y^2} + \dfrac{\partial^2 f}{\partial z^2}$$
+\subsection{Operateur Laplacien vecteur}
+\subsubsection{En coordonnée cartesienne}
+\[ \overrightarrow{\Delta(\overrightarrow{D})} = \left|
+ \begin{array}{*{4}{c}}
+\Delta(\overrightarrow{D}.\overrightarrow{u_x})\\
+ 			      \\
+\Delta(\overrightarrow{D}.\overrightarrow{u_y})\\
+			      \\
+\Delta(\overrightarrow{D}.\overrightarrow{u_z})\\
+\end{array} \right. \]
+\subsection{Operateur Rotationnel}
+\subsubsection{En coordonée cartesienne}
+\[ \overrightarrow{rot}(\overrightarrow{D}) = \left|
+ \begin{array}{*{4}{c}}
+\dfrac{\partial D_z}{\partial y} - \dfrac{\partial D_y}{\partial z}\\
+ 			      \\
+\dfrac{\partial D_x}{\partial z} - \dfrac{\partial D_z}{\partial x}\\
+			      \\
+\dfrac{\partial D_y}{\partial x} - \dfrac{\partial D_x}{\partial y}\\
+\end{array} \right. \]
+\subsection{Opérateur Nabla}
+\subsubsection{En coordonnée cartesienne}
+\[ \overrightarrow{\nabla} = \left|
+ \begin{array}{*{4}{c}}
+\dfrac{\partial}{\partial x}\\
+ 			      \\
+\dfrac{\partial }{\partial y}\\
+			      \\
+\dfrac{\partial }{\partial z}\\
+\end{array} \right. \]\\\\
+\begin{prop}
+A partir de cet opérateur, on peut retrouver les autres opérateurs :
+$$\overrightarrow{grad}(f) = \overrightarrow{\nabla}(f)$$
+$$div(\overrightarrow{D}) = \overrightarrow{\nabla}.\overrightarrow{D}$$
+$$\Delta f = \overrightarrow{\nabla}^2(f)$$
+$$\overrightarrow{rot}(\overrightarrow{D}) = \overrightarrow{\nabla}\wedge\overrightarrow{D}$$
+\end{prop}
+\section{Propriétés, formules et théorèmes}
+\subsection{Propriétés des opérateurs}
+Nous avons les propriétés suivantes : \\
+\begin{itemize}
+ \item[$\rightarrow$] $\overrightarrow{rot}(\overrightarrow{grad}(f)) = \overrightarrow{0}$\\
+ \item[$\rightarrow$] $div(\overrightarrow{rot}(\overrightarrow{D)}= 0$\\
+\end{itemize}
+\subsection{Formules}
+Nous avons les formules suivantes : \\
+\begin{itemize}
+ \item[$\rightarrow$] $\overrightarrow{grad}(fg) = f.\overrightarrow{grad}(g) + g.\overrightarrow{grad}(f)$\\
+ \item[$\rightarrow$] $div(f.\overrightarrow{D}) = f.div(\overrightarrow{D})+\overrightarrow{grad}(f).\overrightarrow{D}$\\
+ \item[$\rightarrow$] $\overrightarrow{rot}(f.\overrightarrow{D}) = f.\overrightarrow{rot}(\overrightarrow{D}) + \overrightarrow{grad}(f)\wedge\overrightarrow{D}$\\
+ \item[$\rightarrow$] $\overrightarrow{rot}(\overrightarrow{rot}(\overrightarrow{D}) = \overrightarrow{grad}(div \overrightarrow{D}) - \overrightarrow{\Delta(\overrightarrow{D})}$\\
+\end{itemize}
+\subsection{Théorème}
+\subsubsection{Théorème de Green-Ostrogradski ou théorème de la Divergence}
+Soit $\Sigma$ une surface fermé. On obtient que : 
+$$\underset{\Sigma}\iint \overrightarrow{D}.\overrightarrow{n}.dS = \underset{Vol}\iint div(\overrightarrow{D}).dV$$
+Avec Vol le volume interieur de $\Sigma$.
+\subsubsection{Théorème de Stockes}
+Soit $\Sigma$ une surface quelconque, de contours $\Gamma$ :
+$$\underset{\Gamma}\oint \overrightarrow{D}.\overrightarrow{dl} = \underset{\Sigma}\iint \overrightarrow{rot}(\overrightarrow{D}).\overrightarrow{n}.dS$$
+
+
+
+
+
+
+
+
+
+

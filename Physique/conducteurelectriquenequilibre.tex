@@ -1,0 +1,77 @@
+\chapter{Conducteur électrique en équilibre}
+\section{Définitions}
+\subsection{Conducteur}
+\begin{de}
+Un conducteur est un composant qui contient des charge mobiles, susceptible de ce déplacer.
+\end{de}
+\begin{de}
+On dit qu'un conducteur est à l'équilibre si il est à l'équilibre mécanique.\\
+Toutes les charges à l'intérieur de ce conducteur doivent être à l'équilibre mécanique.\\
+Considérons une charge mobile. Cette charge est à l'équilibre si :
+$$\sum \overrightarrow{F} = \overrightarrow{0}$$
+\end{de}
+\section{Propriétés de l'équilibre pour un conducteur donnée}
+\subsection{Conséquence des définitions globale}
+\subsubsection{Le champs électrique est nul à l'intérieur d'un conducteur}
+Considérons un électron.\\
+Le système est à l'équilibre, on obtient donc : 
+$$q.\overrightarrow{E}+m.\overrightarrow{g} = \overrightarrow{0}$$
+Ce qui implique que : 
+$$\overrightarrow{E} = \dfrac{-m.\overrightarrow{g}}{q}$$
+Par application numérique, on obtient un champs électrique de l'ordre du $10^{-11}$.\\
+On peut donc considérer qu'à l'équilibre, sont champs équilibre est nul.
+\subsubsection{Le conducteur est un volume équipotentiel}
+Sachant que :
+$$\overrightarrow{E} = -\overrightarrow{grad}(V)$$
+On obtient, qu'a l'équilibre, comme le champs est nul, le potentiel est une constante.\\
+Un conducteur à l'équilibre est donc un volume équipotentiel
+\subsubsection{La densité volumique de charge est nul dans un conducteur}
+Nous avons vu que : 
+$$div(\overrightarrow{E}) = \dfrac{\rho}{\varepsilon_0}$$
+Ceci implique que $\rho=0$. À l'intérieur du conducteur, les charges se compensent. L'excédent de charge est porté par la surface. Il y a donc une densité surfacique de charge.
+\subsection{Cavité vide de charge dans un conducteur}
+En considérant le faite qu'on ne peut pas avoir un extremum du potentiel dans une zone vide de charge, et qu'il y à continuité du potentiel à la traversé de la surface, le potentiel dans la cavité est le même que dans le conducteur.
+\subsection{Champs électrique à la surface du conducteur}
+Nous avons vu : 
+$$\overrightarrow{E}_{int}-\overrightarrow{E}_{ext} = \dfrac{\sigma}{\varepsilon_0}\overrightarrow{n}$$
+Or le champs intérieur est nul dans un conducteur à l'équilibre, nous l'avons vu. On obtient donc que : 
+$$E_{ext} = \dfrac{\sigma}{\varepsilon_0}$$
+La mesure du champs électrique extérieur permet donc de connaître la densité surfacique $\sigma$.
+\section{Système de conducteur en équilibre}
+\subsection{Il y a unicité des solutions}
+Considérons un ensemble de conducteurs. On démontre que si on à un ensemble de conducteur, et si on fixe des conditions (ex : La charge $q_i$ ou le potentiel $V_i$ du conducteur i), alors $V(M)$ est fixé (Et non défini à une constante près, comme habituellement).\\
+De plus, on as : 
+$$\Delta V = \dfrac{\rho}{\varepsilon_0} = 0$$
+Car l'espace entre les conducteurs est vide de charge. On fait appelle aux conditions appelé conditions limite : 
+\begin{itemize}
+ \item[$\rightarrow$] Si $V_i$ est connu, à l'aide d'une relation de continuité par exemple
+ \item[$\rightarrow$] Si $q_k$ est connu, à l'aide d'une surface de Gauss par exemple
+\end{itemize}
+Alors il existe une solution unique pour définir V(M)
+\subsection{Conducteur seul dans l'espace}
+On pose la relation suivante : 
+$$Q = C.V$$
+Avec Q la charge, C la capacité du conducteur, et V le potentiel.\\
+Considérons une sphère de rayon r.\\
+On obtient à l'aide d'une surface de Gauss que : 
+$$V = \dfrac{Q}{4\pi\varepsilon_0.r}$$
+En posant que le potentiel est nul à l'infini (pour la constante).\\
+On obtient donc quand ce cas que : 
+$$C = 4\pi\varepsilon_0$$
+\subsection{Influence électrique}
+Considérons une sphère métallique conducteurs.\\
+Si on rapproche une charge de ce conducteur, la répartition des charges en surface est modifié, mais $\rho$, la densité volumique de charge demeure nulle.
+\section{Condensateur}
+\begin{de}
+Un condensateur est composé de deux conducteur en influence totale.
+\end{de}
+\subsection{Capacité d'un condensateur}
+Considérons un condensateur composée de deux conducteur sphérique 1, de charge $Q_1$ et 2, de charge intérieur (surface la plus proche de 1) $Q_{2~ int}$, et de charge extérieur $Q_{2~ ext}$, avec 1 intérieur à 2.\\
+Considérons une surface $\Sigma$ sphérique contenu dans 2. Les conducteurs étant à l'équilibre, on obtient que : 
+$$\forall M \in \Sigma~ \underset{\Sigma}\iint \overrightarrow{E}(M).\overrightarrow{n}.dS = 0 = \dfrac{Q_1 + Q_{2~ int}}{\varepsilon_0}$$
+Ceci implique que : 
+$$Q_{2~ int} = -Q_1$$
+Considérant maintenant un point M extérieur à 2. On obtient : 
+$$\iint \overrightarrow{E}(M).\overrightarrow{n}.dS = \dfrac{Q_1 + Q_{2~ int}+ Q_{2~ ext}}{\varepsilon_0} = \dfrac{Q_{2~ ext}}{\varepsilon_0}$$
+Le champs entre les armatures ne dépend que de $Q_1$. On obtient donc :
+$$Q_1 = C.(V_1-V_2)$$

@@ -1,0 +1,157 @@
+
+\chapter{Mécanique du solide}
+\section{Lois de la mécanique d'un système materiel}
+\subsection{Modélisation d'un système matériel}
+On peut modifier un système materiel de deux façons : 
+\begin{itemize}
+ \item[$\rightarrow$] Approche discrète : $m_t = \sum m_i$
+ \item[$\rightarrow$] Approche continue : $m_t = \iiint \rho.dV$
+\end{itemize}
+Dans la suite de l'exposé, on utilise la notation discrète, mais la notation continue est totalement utilisable.
+\subsection{Théorème du centre d'inertie ( ou de la résultante cinétique) }
+\subsubsection{Quantité de mouvement d'un système}
+\begin{de}
+On appelle quantité de mouvement d'un système, notée $\overrightarrow{P}$ : 
+$$\overrightarrow{P} = \sum m_i.\overrightarrow{v_i}$$
+En introduisant le barycentre, ou centre de masse, noté G : 
+$$m_t.\overrightarrow{OG} = \sum m_i.\overrightarrow{OM_i}$$
+On obtient que : 
+$$\overrightarrow{P} = m_t.\overrightarrow{V_G}$$
+\end{de}
+\begin{theo}
+Par application de la seconde loi de Newton, on obtient que : 
+$$\dfrac{d\overrightarrow{P}}{dt} = \sum\overrightarrow{F_{ext}}$$
+Ceci constitue le théorème du centre d'inertie
+\end{theo}
+\subsection{Référentiel Barycentrique}
+\begin{de}
+Un référentiel barycentrique est un référentiel qui a pour origine le centre des masses du système, et qui est en translation uniforme par rapport à un référentiel galiléen.
+\end{de}
+\begin{de}
+On note $X^*$ la grandeur X dans le référentiel barycentrique.
+\end{de}
+\begin{prop}
+Dans un référentiel barycentrique, nous avons : 
+$$\overrightarrow{p^*} = \overrightarrow{0}$$
+\end{prop}
+\subsection{Système ouvert}
+Pour un système ouvert, on considére la masse à l'instant t, et la masse à l'instant t+dt du système, plus la masse éjecté durant dt. On peut donc définir dans ce cas un système fermé.
+\section{Théorème du moment cinétique}
+\subsection{Moment cinétique}
+\begin{de}
+Considérons le moment cinétique d'un point materiel O, dans le référentiel R, défini par : 
+$$\overrightarrow{L_{O/R}} = \overrightarrow{OM}\wedge m.\overrightarrow{v}$$
+On defini donc le moment cinétique pour un ensemble de point par : 
+$$\overrightarrow{L_{O/R} = \sum.\overrightarrow{OM}\wedge m.\overrightarrow{v_i}}$$ 
+\end{de}
+\begin{prop}
+On obtient la formule de changement de point du moment cinétique : 
+$$\overrightarrow{L_{A/R}} = \overrightarrow{L_{O/R}} + \overrightarrow{AO}\wedge\overrightarrow{p}$$
+Avec $\overrightarrow{p}$ la quantité de mouvement du système. On obtient donc que le moment cinétique et la quantité de mouvement constitue un torseur cinétique
+\end{prop}
+\subsection{Théorème de Koening}
+En partant de la décomposition de la vitesse : 
+$$\overrightarrow{v_i} = \overrightarrow{v_{G/R}} + \overrightarrow{v_i^*}$$
+Avec $\overrightarrow{v_{G/R}}$ la vitesse du centre de masse G par rapport au référentiel R, et $\overrightarrow{v_i^*}$ la vitesse du point i dans le référentiel barycentrique. \\
+On obtient que :
+$$\overrightarrow{L_{O/R}} = m_t.\overrightarrow{OG}\wedge\overrightarrow{v_G} + \overrightarrow{L_O^*}$$
+On décompose donc le moment cinétique en un moment du à un mouvement de translation, et un autre du a un mouvement de rotation.
+\begin{prop}
+Le moment cinétique, dans le référentiel barycentrique, ne dépend pas du point où on le calcul. On l'écrit donc :
+$$\overrightarrow{L^*}$$
+\end{prop}
+\subsection{Théorème du moment cinétique en un point fixe}
+Soit O un point fixe par rappor à R. On obtient que : 
+$$\dfrac{d\overrightarrow{L_{O/R}}}{dt} = \sum \overrightarrow{OM}\wedge\overrightarrow{F_{ext}}$$
+\subsection{Théorème du moment cinétique en un point mobile}
+Soit A un point mobile par rapport à R. On obtient que : 
+$$\dfrac{d\overrightarrow{L_{A/R}}}{dt} = \sum \overrightarrow{AM}\wedge\overrightarrow{F_{ext}} - \overrightarrow{v_A}\wedge\overrightarrow{p}$$
+En particulier, si R est un référentiel galiléen et que le point mobile est G, le centre de masse, on obtient que :
+$$\dfrac{d\overrightarrow{L_{G/R}}}{dt} = \sum \overrightarrow{GM}\wedge\overrightarrow{F_{ext}}$$
+\subsection{Représentation torsorielle}
+Nous avons les représentations suivantes : 
+$$\mbox{ Torseur Cinématique } \begin{cases}
+                                \overrightarrow{P} \\ \overrightarrow{L_O}
+                               \end{cases}
+$$
+$$\mbox{ Torseur Dynamique} \begin{cases}
+                                \overrightarrow{R} = \sum \overrightarrow{F_{ext}} \\ \overrightarrow{\mathcal{M}} = \sum \overrightarrow{OM}\wedge\overrightarrow{F_{ext}}
+                               \end{cases}
+$$
+On observe que le torseur dynamique est la dérivé du torseur cinématique
+\section{Théorème de l'énergie cinétique}
+\subsection{Énergie cinétique}
+\begin{de}
+Par définition, pour un ensemble de point materiel, on obtient : 
+$$E_c = \sum \dfrac{1}{2}.m_i.v_i^2$$
+\end{de}
+\subsection{Théorème de Koening}
+De la façon que précédement, on obtient que : 
+$$\overrightarrow{E_c} = \dfrac{1}{2}.m_t.V_g^2 + \overrightarrow{E_c^*}$$
+\subsection{Théorèmes}
+\begin{prop}
+En partant de l'expression de l'énergie cinétique, on obtient que :
+$$\Delta E_c = W_{ext} + W_{int}$$
+Avec $W_{ext}$ le travail des forces exterieurs et $W_{int}$ le travail des forces interieurs. Si le système est un solide, donc indéformable, on obtient : 
+$$\Delta E_c = W_{ext}$$
+\end{prop}
+\section{Cas du solide}
+\begin{de}
+On défini un solide par : 
+$$\forall (A,B) \in \mbox{Objet}^2~ \parallel\overrightarrow{AB}\parallel = cte$$
+C'est donc un objet indéformable
+\end{de}
+\subsection{Cinétique}
+\subsubsection{Champs de vitesse}
+Considérons un solide, en mouvement dans un référentiel R fixe. On défini un référentiel R', lié au solide. Soit C le centre d'un repère lié a R', et M un point du solide. On obtient : 
+$$\overrightarrow{v}_M = \overrightarrow{v}_C + \overrightarrow{\Omega}\wedge\overrightarrow{CM}$$
+Avec $\overrightarrow{\Omega}$ le vecteur rotation instantané
+\subsection{Torseur cinématique}
+\subsubsection{Solide possédant un point fixe}
+Considérons que le solide possède un point fixe, notée C. D'après la relation précédente, on obtient que, pour tous point M du solide :
+$$ \overrightarrow{v}_M = \overrightarrow{\Omega}\wedge\overrightarrow{CM}$$
+En utilisant le théorème du moment cinétique, on obtient que :
+$$I = \sum m_i.r_i^2$$
+Avec I le moment d'inertie par rapport aux axes.
+\subsubsection{Solide possédant un axe fixe}
+On obtient que le vecteur rotation instantanée est porté par l'axe fixe, Oz par exemple. En appliquant le théorème du moment cinétique, on obtient que :
+$$\overrightarrow{L}_C = I_{Oz}.\overrightarrow{\Omega} + \overrightarrow{L}_{C\bot}$$
+Si z est un axe de symétrie, on obtient que : 
+$$\overrightarrow{L}_C = I_{Oz}.\overrightarrow{\Omega}$$
+Ce qui s'écrit aussi : 
+$$\overrightarrow{L}_C = \overrightarrow{L}_{C_{//}}$$
+\subsection{Moment d'inertie par rapport à un axe}
+\subsubsection{Relation de Huygens}
+Soit $\Delta$ et $\Delta'$ deux droites parralèle séparé d'une distance A. On obtient que :
+$$I_{\Delta'} = I_{\Delta} + m_t.A^2$$
+Ceci constitue la relation de Huygens.
+\subsection{Energie cinétique}
+Supposons que le solide possède un point fixe, noté C. On obtient, en partant de l'expression général de l'énergie cinétique, et du champs de vitesse, la relation suivante : 
+$$E_c = \dfrac{1}{2}.\overrightarrow{L}_C.\overrightarrow{\Omega}$$
+De plus, si on suppose qu'il existe un axe de rotation instantanée $\Delta$ parralèle à $\overrightarrow{\Omega}$, on obtient que :
+$$E_c = \dfrac{1}{2}I_{\Delta}.\Omega^2$$
+\section{Contact entre deux solides}
+\subsection{Types de mouvement relatif}
+Il existe trois types de mouvement relatif : 
+\begin{itemize}
+ \item[$\rightarrow$] Mouvement de Translation
+ \item[$\rightarrow$] Mouvement de Rotation
+ \item[$\rightarrow$] Mouvement de Roulement
+\end{itemize}
+\subsection{Vitesse de glissement}
+On considère deux solides en contact. À un instant t donnée, on suppose que les points $I_1$, du solide 1, et $I_2$, du solide 2, sont en contact. On obtient l'expression de la vitesse de glissement, noté $\overrightarrow{v}_g$ : 
+$$\overrightarrow{v}_{g_{2\rightarrow 1}} = \overrightarrow{v}_{I_2/R} - \overrightarrow{v}_{I_1/R}$$
+\subsection{Lois de Coulomb pour le glissement}
+Considérons un contact. La résultante $\overrightarrow{R}$ se décompose en deux forces : 
+\begin{itemize}
+ \item[$\rightarrow$] $\overrightarrow{F}$, la force de frottement
+ \item[$\rightarrow$] $\overrightarrow{n}$, la réaction normale au support
+\end{itemize}
+\subsubsection{En l'absence de glissement}
+En l'absence de glissement, on obtient que : 
+$$\dfrac{\parallel\overrightarrow{F}\parallel}{\parallel\overrightarrow{n}\parallel}\leq f_0$$
+Avec $f_0$ le coefficiant de frotement statique
+\subsubsection{Avec glissement}
+Si il y a glissement, on obtient que : 
+$$\dfrac{\parallel\overrightarrow{F}\parallel}{\parallel\overrightarrow{n}\parallel} =  f$$
+Avec f le coefficiant de frottement dynamique, $f\ll f_0$

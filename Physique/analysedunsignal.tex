@@ -1,0 +1,77 @@
+\chapter{Analyse d'un signal}
+\section{Signal périodique}
+Soit f une fonction.
+\begin{de}
+f est une fonction périodique si :
+$$\exists T~ tq~ \forall t~ f(t+T) = f(t)$$
+\end{de}
+\subsection{Caractéristique principale}
+Soit f une fonction périodique.
+\subsubsection{Période, fréquence}
+Ces deux caractéristiques sont fondamentale. La fréquence de la fonction est l'inverse de la période :
+$$f = \dfrac{1}{T}$$
+\subsubsection{Valeur moyenne}
+\begin{de}
+On défini la valeur moyenne d'une fonction f de la façon suivante : 
+$$\left\langle f(t) \right\rangle = \dfrac{1}{T} \int_{t_0}^{t_0+T} f(t)dt $$
+\end{de}
+\subsubsection{Valeur efficace}
+\begin{de}
+On défini la valeur efficace d'une fonction f de la façon suivante :
+$$F_e = \sqrt{\left\langle f^2(t) \right\rangle}$$
+On peut l'écrire aussi sous la forme : 
+$$F_e^2 = \dfrac{1}{T} \int_{t_0}^{t_0+T} f^2(t)dt$$
+\end{de}
+\section{Décomposition d'un signal périodique en fonction sinusoïdale}
+\subsection{Théorème de Fourier}
+\begin{enon}
+Considérons une fonction périodique f : 
+$$\exists T~ tq~ \forall t~ f(t+T) = f(t)$$
+Il existe deux suites, ($a_n$) et $(b_n)$, telque : 
+$$f(t) = \dfrac{a_0}{2} + \sum_{n=1}^{\infty} a_n\cos\left(\dfrac{2\pi n t}{T}\right) + \sum_{m=1}^{\infty} b_m\sin\left(\dfrac{2\pi m t}{T}\right)$$
+\end{enon}
+Les suites $(a_n)$ et $(b_n)$ sont appelé coefficients de Fourier.
+\begin{enon}
+$\forall n \in N$ : 
+$$a_n = \dfrac{2}{T}\int_{t_0}^{t_0+T} f(t)\cos\left(\dfrac{2\pi nt}{T}\right)dt$$
+$$b_n = \dfrac{2}{T}\int_{t_0}^{t_0+T} f(t)\sin\left(\dfrac{2\pi nt}{T}\right)dt$$
+\end{enon}
+\begin{prop}
+On observe que : 
+\begin{itemize}
+ \item[$\rightarrow$] Si f est impaire, $\forall n \in N~ a_n=0$
+ \item[$\rightarrow$] Si f est paire, $\forall n \in N~ b_n=0$
+\end{itemize}
+\end{prop}
+\subsubsection{Coefficients de Fourier complexe}
+\begin{prop}
+En passant $\cos$ et $\sin$ en complexe, dans les coefficients de Fourier, on obtient que : 
+$$f(t) = \sum_{-\infty}^{+\infty}c_n.e^{\frac{i2\pi nt}{T}}$$
+avec : 
+$$c_n = \dfrac{1}{T}\int_{t_0}^{t_0+T} f(t)e^{\frac{-i2\pi nt}{T}}dt$$
+\end{prop}
+\subsection{Identité de Parseval}
+Soit f fonction périodique.\\
+\begin{de}
+Considérons le développement en série de Fourier de f : 
+$$f(t) = \dfrac{a_0}{2} + \sum_{n=1}^{\infty} a_n\cos\left(\dfrac{2\pi n t}{T}\right) + \sum_{m=1}^{\infty} b_m\sin\left(\dfrac{2\pi m t}{T}\right)$$
+On en déduit que : 
+$$\left\langle f^2(t)\right\rangle = \dfrac{a_0}{4} + \sum_1^{\infty} \dfrac{a^2_n}{2} + \sum_1^{\infty} \dfrac{b²_n}{2}$$
+car tous les doubles produits, issue de l'élévation au carré, qui comporte des fonctions cos ou sin ont une valeur moyenne nulle.
+En posant :
+$$c_n = \dfrac{a_n - ib_n}{2}$$
+On obtient : 
+$$\left\langle f^2(t)\right\rangle = \sum_{-\infty}^{+\infty} |c_n|^2$$
+ 
+\end{de}
+
+\subsection{Transformée de Fourier}
+\begin{de}
+Considérons f, une fonction.\\
+On associe à f une fonction périodique $\overset{\sim}f$ : 
+$$\forall t~ f(t) \rightarrow \overset{\sim}f(\nu)$$
+Avec : 
+$$\overset{\sim}f(\nu) = \int_{-\infty}^{+\infty} f(t)e^{-i2\pi\nu t}dt$$
+On peut retourner cette égalité.
+\end{de}
+

@@ -1,0 +1,149 @@
+\chapter{Rappel et complément - Thermodynamique classique}
+\section{Principe}
+\subsection{Principe zéro}
+\begin{enon}
+Si on prend un système isolé, celui-ci évolue vers un état d'équilibre
+\end{enon}
+Ce principe est celui de l'existence d'état d'équilibre.\\
+Dans ces états d'équilibre, les grandeurs thermodynamique, grandeurs macroscopique, sont parfaitement définies.
+\subsubsection{Grandeur intensive, extensive}
+\begin{de}
+Une grandeur est extensive si l'addition a un sens pour elle. Si ça n'est pas le cas, la grandeur est dit intensive
+\end{de}
+\subsection{Premier Principe}
+\begin{enon}
+Le premier principe est un principe d'évolution
+Il existe une grandeur, appellé énergie totale, extensive et conservative, que l'on peut définir dans tous système fermé.
+On appelle énergie totale d'un système, toutes l'énergie présente, peu importe sa forme.
+$$E_{tot}=E_{m,M}+u+E_{nucl}+E_{autre}$$
+L'énergie est une fonction d'état. Elle ne dépend pas du chemin suivit, mais uniquement de l'état de départ et de l'état d'arrivé.\\
+La varitation de cette énergie est donnée par : 
+$$\Delta E = w + Q$$
+\end{enon}
+\subsubsection{Enthalpie}
+\begin{de}
+Soit enthalpie, fonction d'état notée H, la fonction définie par : 
+$$H = u+pV$$
+Avec u énergie interne, p la pression et V le volume. 
+\end{de}
+\begin{prop}
+Dans le cas d'une transformation monobar (pression exterieur constante), on as :
+$$Q = \Delta H$$
+\end{prop}
+\subsubsection{Extension du premier principe à un systeme ouvert}
+\begin{prop}
+On peut etendre ce principe à u système ouvert. Par exemple, dans le cas d'une fluide en écoulement, on prend comme système : Systeme ouvert (Machine) + fluide qui entre pour l'instant t, et Systeme ouvert (Machine) + fluide qui sorte à l'instant t+dt.\\
+Dans ce cas, on peut appliquer le premier principe à ce système.
+\end{prop}
+
+\subsection{Second principe}
+\begin{enon}
+Énoncé de Thompson :\\ 
+Une machine ne peut pas effectuer un travail si elle n'est en contact qu'avec une seul source de chaleur
+\end{enon}
+\begin{enon}
+Énoncé de Clausius :\\
+Il ne peut pas y avoir de transformation donc le seul effet serai de transporter de la chaleur d'une source froide vers une source chaude.
+\end{enon}
+\subsubsection{Entropie}
+\begin{enon}
+Pour tous système fermé, on peut définir une fonction d'état, notée S, appelé entropie, qui serai une grandeur extensive, mais non conservative. Cette grandeur peut être crée ou non, mais jamais détruite.
+\end{enon}
+\begin{de}
+Le bilan entropique est défini par :
+$$\Delta S = S^{r}+S^{p}=\int dS$$
+$$S^{r}=\int \dfrac{\delta Q}{Tf}$$
+Si le système est caractérisé par T,V, on a :
+$$dS = \dfrac{du}{T}+\dfrac{p.dV}{T}$$
+Si il est caractérisé par p,T, on a :
+$$dS = \dfrac{dH}{T}-\dfrac{V.dp}{T}$$
+On détermine $S^{p}$ à l'aide de la relation :
+$$S^{p} = \Delta S - S^{r}$$
+\end{de}
+\subsubsection{Température}
+À l'aide de l'expression de dS dans le cas d'un système caractérisé par T,V, on peut définir la température par : 
+$$\dfrac{1}{T} = \left(\dfrac{\partial S}{\partial u}\right)_V$$
+\section{Quelques notions de mécanique statique}
+\subsection{Modèle cinétique du gaz parfait}
+\begin{de}
+On montre que la pression exercé par N molécule de masse m, dans un volume V est donnée par : 
+$$P = \dfrac{N.m.<v^2>}{V.3}$$
+Avec $<v^2>$ la vitesse quadratique moyenne des molécules.
+\end{de}
+\begin{de}
+On défini la constant de Boltzman, notée k, par : 
+$$k = \dfrac{R}{Na}$$
+Avec R la constante des gaz parfait, et Na le nombre d'Avogadro.
+\end{de}
+\begin{de}
+Chaque terme énergétique ajoute un terme en $\dfrac{1}{2}R$ dans la capacité calorifique à volume constant dans le modèle des gaz parfait.\\
+Pour un gaz parfait diatomique, on défini : 
+\begin{enumerate}
+ \item[$\rightarrow$] $C_v = \dfrac{3}{2}R$ a basse température ( Translation )
+ \item[$\rightarrow$] $C_v = \dfrac{5}{2}R$ a température ambiante ( Translation + rotation )
+ \item[$\rightarrow$] $C_v = \dfrac{7}{2}R$ a haute température ( Translation + rotation + vibration )
+\end{enumerate}
+\end{de}
+
+\subsection{Interprétation statistique de l'entropie}
+\begin{de}
+Un état macroscopique est constitué de multiples états microscopique. Boltzman défini l'entropie par :
+$$S = k.ln(\Omega)$$
+Avec $\Omega$ le nombres d'états microscopique constituant l'état macroscopique.\\
+L'entropie augmente donc quand le nombres d'état microscopique augmente. 
+\end{de}
+\section{Gaz parfait}
+\subsection{Équation d'état des gaz parfaits}
+\begin{de}
+L'équation d'état des gaz parfaits est : 
+$$p.V = n.R.T$$
+Avec p, la pression exprimé en Pa ( 1 bar = $10^5$ Pa), le volume en $m^3$, n en moles et T en Kelvin.\\
+R, la constante des gaz parfait, est donnée par :
+$$R = 8,314~ J.K^{-1}.mol^{-1}$$
+Cette équation est du à Gay-Lussac.
+\end{de}
+\begin{de}
+Cette équation est éloigné des résultats expérimentaux. On utilise un "variante" de cette équation, appellé equation de Van der Walles. Cette équation est : 
+$$\left( p + \dfrac{a}{V^2}\right).(V-b) = R.T$$
+Dans cette équation, on prend en compte le covolume (le volume des atomes), ce qui réduit le volume disponible, et on considère les interactions entre atomes, ce qui diminue la pression. Ces deux choses ne sont pas considéré dans le modèle du gaz parfait.
+\end{de}
+\subsection{Loi de Joules}
+\subsubsection{Premier loi de Joules}
+\begin{enon}
+Le première loi de Joules postule que u est une fonction qui dépend uniquement de la température. u=f(T)
+\end{enon}
+\begin{prop}
+À partir de cette loi, on peut voir que : 
+$$du = \dfrac{\partial f}{\partial T}dT = n.C_v.dT$$
+\end{prop}
+\subsubsection{Deuxième loi de Joules}
+\begin{enon}
+La deuxieme loi de Joules dit que, a l'aide de l'équation d'état des gaz parfaits : 
+$$H = U + pV = f(T) + n.R.T = F(T)$$
+Donc l'enthalpie est aussi une fonction de la température. De plus :
+$$dH = n.C_p.dT \Rightarrow C_p = G(T)$$
+La capacité calorifique à pression constante est donc aussi une fonction de la température.\\
+D'après ces expression, on en déduit que : 
+$$n.C_p = n.C_v + n.R$$
+On obtient donc la relation de Mayer :
+$$C_p - C_v = R$$
+\end{enon}
+\subsection{Entropie}
+\begin{de}
+On appelle identité thermodynamique la relation suivante :
+$$du = \delta Q + \delta w$$
+\end{de}
+\begin{prop}
+D'après l'identité thermodynamique, et sachant que : 
+$$dH = du + d(pV)$$
+On obtient : 
+$$dH = \delta Q + \delta w + pdV+Vdp$$
+Sachant que H et u sont des fonctions d'état, donc ne dépendent pas du chemin suivit, mais uniquement de l'état de départ et de l'état d'arrivé, on peux considérer un transformation réversible. On obtient donc :
+$$\delta Q_{rev} = T_fdS$$
+Donc :
+$$dH = T_fds + Vdp$$
+En développement à l'aide de l'entropie, dans le cas d'une transformation adiabatique quasi statique d'un gaz parfait,  on obtient la relation de Laplace : 
+$$p.V^{\gamma} = cte$$
+Avec $\gamma$ défini par : 
+$$\gamma = \dfrac{C_p}{C_v}$$
+\end{prop}

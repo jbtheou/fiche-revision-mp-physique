@@ -1,0 +1,97 @@
+\chapter{Potentiel Chimique}
+\section{Enthalpie libre}
+\subsection{Travail récupérable dans une transformation monotherme, monobar}
+Considérons une transformation monotherme, le système est en contact avec un thermostat, et monobar, la pression exterieur au système est constante ( Ce genre de transformation est le cas global en chimie).\\
+Par application du premièr principe : 
+$$\Delta u = w + Q$$
+D'ou, avec $w_a$ un travail autre que les forces de pression :
+$$w_a = \Delta u + p_0\Delta V - T_0 \Delta S - T_0 \Delta S^p = \Delta G^* + T_0 \Delta S^p$$
+Donc $-w_a$, le travail récupérable, est limité par : 
+$$w_a \leq \Delta G^*$$
+\subsection{Enthalpie libre}
+On introduit G, une fonction d'état, appelé enthalpie libre, qui est la fonction d'état le plus approprié pour étudier un systeme chimique subissent une évolution monobar et monotherme. On peut en effet exprimé H en fonction de G, nous le verrons.\\
+Posons : 
+$$G = U + pV - TS = H - TS$$
+D'où :
+$$dG = \delta w_a + Vdp - SdT - TdS^p$$
+Dans ce cas, si $w_a = 0$: 
+$$\Delta G \leq 0$$
+G ne peut que diminuer au cours de l'évolution. L'état d'équilibre est atteint pour le minimum de cette fonction.
+\subsection{Relation de Gibbs-Helmotz}
+Considérons un système réversible soumis uniquement à des forces de pression.\\
+Dans ce cas :
+$$dG = VdP - SdT$$
+D'ou : 
+$$S = -\dfrac{\partial G}{\partial T}$$
+En utilisant la deuxième définition de G donné dans l'étude de l'enthalpie libre, on obtient que : 
+$$H = G - T\left( \dfrac{\partial G}{\partial T}\right)_{p,etc..} $$
+D'ou : 
+$$\dfrac{H}{T^2} = -\dfrac{\partial}{\partial T } \left(\dfrac{G}{T} \right) $$
+\section{Potentiel chimique}
+\begin{de}
+Considérons un système chimique, par exemple $C + O_2 \rightarrow CO_2$. Ce système est caractérisé par T,P,V,$n_i$, avec $n_i$ les quantites de matière des entités présente.\\
+L'enthalpie libre est donc une fonction de ces variables. Soit $\mu_i$, le potentiel chimique de l'entité i, défini par : 
+$$\mu_i = \left( \dfrac{\partial G}{\partial n_i}\right)_{T,P,n_j} $$
+\end{de}
+\subsection{Relation d'Euler}
+\begin{enon}
+Soit $n_i$ la quantité de matière de l'entité i, et $\mu_i$ sont potentiel chimique. Notons l'une des entités chimiques $i0$.\\
+On obtient la relation d'Euler, en considérant un système "séparer vituellement" en deux partie, avec une partie négligable devant l'autre :
+$$G(T,P) = \sum_i \mu_i.n_{i}$$
+\end{enon}
+\subsection{Relation de Gibbs-Duhem}
+\begin{enon}
+D'après la relation d'Euler, on obtient que : 
+$$Vdp - SdT = \sum_i n_i.d\mu_i$$
+\end{enon}
+\subsection{Équilibre d'un corps présent sous deux phases}
+Considérons un système contenant deux solvants, Eau et Huile par exemple, et un corps présent dans chaqu'un de ces deux solvants\\
+On défini l'enthalpie libre de ce systeme comme la somme de l'enthalpie libre des deux sous systèmes.\\
+On obtient que le corps va migrer dans la phase où le potentiel chimique est le plus faible. Or nous avons vu que :
+$$\mu_i(T,P,n_i)$$
+Donc le potentiel chimique va varie avec $n_i$. L'équilibre du système est donc atteint quand la variation d'entalpie libre du système est nul, donc quand les potentiels chimiques seront égaux.
+\section{Expression du potentiel chimique}
+\subsection{Gaz parfait pur}
+On obtient la relation suivante : 
+$$\mu(T,P) = \mu(T,P_0) + R.T.ln\left(\dfrac{P}{P_0}\right)$$
+Avec $P_0$ une pression de référence, qui est de 1 bar par convention.
+\subsection{Gaz réel pur}
+Dans le cas d'un gaz réel pur, on utilise un développent de Viriel, qui remplace d'équation d'équation d'états des gaz parfait par : 
+$$\dfrac{p.V}{R.T}= n (1+\dfrac{A(T)}{V}+\dfrac{B(T)}{V^2} +\dfrac{C(T)}{V^3} + \dots)$$
+On obtient donc, la relation suivante :
+$$\mu(T,P) = \mu(T,P_0) + R.T.ln\left(\dfrac{f}{P_0}\right)$$
+Avec f la fugacité du gaz, qui dépend des coefficiants A(T), B(T), C(T), $\dots$.
+\subsection{Gaz parfait dans un mélange de gaz parfait}
+Considérons un mélange constitué de deux gaz parfait.\\
+On obtient la relation suivante : 
+$$\mu_{i_{melange}}(T,P) = \mu_{i_{pur}}(T,P_0) + R.T.ln\left(\dfrac{P_i}{P_0}\right)$$
+Avec $P_i$, la pression partiel de l'entité i, c'est à dire la pression qu'exercerai le gaz si il était seul dans le système.
+\subsection{Phase condensée pur}
+Dans l'étude des phases condensée, on arrive à la conclusion que : 
+$$\mu(T,P)\simeq\mu(T,P_0)$$
+Le potentiel chimique ne dépend plus que de la température
+\subsection{Mélange idéale - Mélange homogène}
+\begin{de}
+On défini un mélange homogène comme un mélange dont la composition est identique en tout point.
+\end{de}
+Considérons un mélange composé de $n_e$ mole d'eau, et de $n_a$ molécule d'alcool. Il y a une phase liquide et une phase gazeuse. À l'équilibre, il y a égalité des potentiels chimiques.\\
+On obtient : 
+$$\mu_{A_{solution}} = \mu_{A_{pur}}(T,P) + R.T.ln\left(\dfrac{P_a}{P_{sa}}\right)$$
+Avec $P_i$ la pression partiel de l'entité A, et $P_{sa}$ la pression de vapeur saturante de l'entité A.
+\subsection{Solution diluée}
+Considérons deux composants, A, le solvant, B, le soluté, avec $n_b \ll n_a$\\
+On obtient : 
+$$\mu_{B_{solution}}(T,P,compo) = f(T,P) + R.T.ln(x_b)$$
+On peut obtenir cette relation à l'aide de la relation de Gibbs-Duhelm
+\begin{enon}
+On a donc :
+$$Vdp -SdT = \sum_i n_i.d\mu_i$$
+Si P est constant, tout comme T, on obtient donc :
+$$\sum_i n_i.d\mu_i = 0$$
+Donc 
+$$-n_a.\dfrac{\partial \mu_a}{\partial x_b} = n_b \dfrac{\partial \mu_b}{\partial x_b}$$
+Grace à ceci on obtient la relation ci dessus.
+\end{enon}
+Cette relation est vérifié dans le cas d'une solution infiniment dilué. Si la solution n'est que dilué, on fait appelle à l'activité.
+$$\mu_{B_{solution}}(T,P,compo) = f(T,P) + R.T.ln(a_b)$$
+Avec $a_b$ l'activité de l'espèce b.

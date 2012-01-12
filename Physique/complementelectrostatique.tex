@@ -1,0 +1,76 @@
+\chapter{Complément d'électrocinétique}
+\section{Définitions}
+\subsection{Intensité de courant}
+\begin{de}
+L'intensité est un débit de charge : 
+$$i = \dfrac{dq}{dt}$$
+\end{de}
+\subsection{Vecteur densité surfacique de courant}
+\begin{de}
+On considère une surface $\Sigma$. On peut écrire : 
+$$ i = \underset{\Sigma}\iint \overrightarrow{j}.\overrightarrow{n}.dS$$
+Avec $\overrightarrow{j}$ le vecteur densité surfacique de courant.
+\end{de}
+Considérons un modèle composé d'un seul type de porteur de charge. \\
+On obtient que : 
+$$dq = \rho_m.\overrightarrow{v}.\overrightarrow{n}.\Sigma.dt$$
+On peut identifier et on obtient que :
+$$\overrightarrow{j} = \rho_m.\overrightarrow{v}$$
+Avec $\rho_m$ la densité de charge mobile. Par un théorème de superposition, on obtient dans un modèle de multiple porteur de charge : 
+$$\overrightarrow{j} = \sum \rho_{m,i}.\overrightarrow{v_i}$$
+\subsection{Équation de continuité}
+Considérons un conducteur fermé de surface $\Sigma$. Nous avons les équations suivantes :
+$$i = \underset{\Sigma}\iint \overrightarrow{j}.\overrightarrow{n}.dS$$
+$$i = \dfrac{-dQ}{dt}$$
+$$Q = \iiint_v \rho.dv$$
+En considérant que cette surface est invariente avec le temps, on obtient que : 
+$$\dfrac{\partial \rho}{\partial t} + div(\overrightarrow{j}) = 0$$
+Ceci est une équation locale, car toute ces composantes dépendent du point M. Cette équation est l'expression de la conservation de la charge.\\
+On en déduit qu'en régime permenant, conscient que dans ce cas $\rho$ est une constante par rapport au temps : 
+$$div(\overrightarrow{j})= 0$$
+\section{Expression de la puissance reçu par un dipôle}
+Considérons un dipôle contenant des charges mobiles. En discrétisant le problème, on obtient l'expression du travail :
+$$\omega = \sum q_i.\overrightarrow{E}(m_i).\overrightarrow{v_i}.dt$$
+Cette somme est a réaliser sur l'ensemble des charges mobiles. Dans le cas continue, on obtient : 
+$$\omega = \underset{v}\iiint \rho_{mobile}.d\tau.\overrightarrow{E}(M)<\overrightarrow{v}>dt$$
+D'ou l'expression de la puissance, sachant que : 
+$$P = \dfrac{d\omega}{dt} = \underset{v}\iiint \rho_{mobile}.d\tau.\overrightarrow{E}(M)<\overrightarrow{v}>$$
+D'ou : 
+$$P = \underset{v}\iiint \overrightarrow{j}.\overrightarrow{E}(M).d\tau$$
+Cette expression est l'expression de la puissance reçu par le dipôle.\\
+Au finale, on obtient donc que : 
+$$P=i*(V_A-V_B)$$
+Avec A et B respectivement le point d'entre et le point de sortie du dipôle.
+\section{Conducteur ohmique}
+\subsection{Loi d'Ohm}
+Soit la loi d'Ohm : 
+$$U = R.i$$
+Cette relation revient à dire que : 
+$$\overrightarrow{j} = \sigma.\overrightarrow{E}$$
+Avec $\sigma$ la conductivité.\\
+La loi d'ohm ne s'applique que si $\rho_m$ est une constante indépendante de $\overrightarrow{E}$. En pratique, un dipôle vérifie la loi d'ohm dans un certain intervalle de valeur pour $\overrightarrow{E}$.
+\subsection{Résistance électrique}
+\begin{de}
+Considérons un dipôle électrique. On suppose qu'il vérifie la loi d'ohm, donc : 
+$$\overrightarrow{j}=\sigma.\overrightarrow{E}$$
+De plus, nous avons les équations suivantes :
+$$i = \underset{\Sigma}\iint \overrightarrow{j}.\overrightarrow{n}.dS$$
+$$\overrightarrow{E} = -\overrightarrow{grad}(V)$$
+On en déduit donc que : 
+$$V_A - V_B = \int_A^B \overrightarrow{E}.\overrightarrow{dm}$$
+On obtient donc que :
+$$V_A - V_B = R.i$$
+Avec R une constante, appelé résistance
+\end{de}
+\begin{prop}
+On remarque des corrélations entre la capacité et la résistance d'un dipôle. On montre que dans une topologie proche, on as : 
+$$R.C = \dfrac{\varepsilon_0}{\sigma}$$
+\end{prop}
+\subsection{Effet Joule}
+Considérons un dipôle. Soit P la puissance reçu par ce dipôle. On obtient : 
+$$P = \iiint \overrightarrow{j}.\overrightarrow{E}.d\tau$$
+Or dans le cas d'un conducteur ohmique : 
+$$\overrightarrow{j} = \sigma \overrightarrow{E}$$
+Donc : 
+$$P = \iiint \sigma.E^2.d\tau > 0$$
+Donc un conducteur ohmique ne peut que consommé de l'énergie.

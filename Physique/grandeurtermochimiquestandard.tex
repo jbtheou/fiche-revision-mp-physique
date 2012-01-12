@@ -1,0 +1,105 @@
+\chapter{Grandeurs thermochimique standards}
+\section{Réaction chimiques}
+\subsection{Équation bilan}
+\begin{de}
+Considérons une réaction chimique. On associe a cette réaction une équation bilan : 
+$$\alpha_1.A_1+\alpha_2.A_2+..... \rightleftarrows \beta_1.B_1+\beta_2.B_2+....$$
+Cette équation rend compte de principalement de deux principes : 
+\begin{itemize}
+ \item[$\rightarrow$] Conservation de la matière ( Conservation des noyaux)
+ \item[$\rightarrow$] Conservation de la charge (Conservation des éléctrons)
+\end{itemize}
+\end{de}
+\subsection{Avancement de la réaction}
+Considérons la réaction chimique précédente. \\
+Soit $dn_{A_i}$ la variation de quantité de matière du réactif $A_i$ et $dn_{B_j}$ la variation de quantité de matière du produit $B_j$.\\
+On introduit l'avancement de la réaction, noté $\varepsilon$ :
+$$d\varepsilon = \dfrac{-dn_{A_i}}{\alpha_i} = \dfrac{dn_{B_i}}{\beta_i}$$
+L'unite de $\varepsilon$ est la mole.\\
+Si il n'y a pas de réaction : 
+$$d\varepsilon = 0$$
+Si il y a une réaction, $\varepsilon$ est bornée par une valeur maximale :
+$$\varepsilon < \varepsilon_{\mbox{max}}$$
+Donc, dans tout les cas, $\varepsilon$ est une grandeur bornée.\\
+On introduit donc le degrès d'avancement, ou taux d'avancement, notée $\gamma$ : 
+$$\gamma = \dfrac{\varepsilon}{\epsilon_{\mbox{max}}} \in \left[0,1\right]$$
+\subsection{Chaleur de réaction}
+\begin{de}
+Considérons un système fermé.\\
+On appelle chaleur de réaction la chaleur reçue par le système.\\
+Si : 
+\begin{itemize}
+ \item[$\rightarrow$] Q > 0 : Réaction endothermique
+ \item[$\rightarrow$] Q < 0 : Réaction exothermique
+\end{itemize}
+\end{de}
+\section{Enthalpie de réaction}
+\subsection{Variation d'enthalpie au cours d'une réaction}
+\begin{prop}
+Considérons un transformation monobar. Dans ce cas, on obtient que : 
+$$\delta Q = dH$$
+D'ou l'expression de l'enthalpie du système : 
+$$H = \sum_i n_{A_i}.h{A_i}(T,P) + \sum_j n_{B_j}.h_{B_j}(T,P)$$
+Avec $h_{A_i}$ l'enthalpie molaire de $A_i$ pure. Pour obtenir cette expression, on suppose donc que l'enthalpie n'est pas modifié par le faite de mélanger les espèces.\\ 
+\end{prop}
+\begin{prop}
+Considérons maintenant une réaction monotherme et monobar, ce qui est le cas dans la grande majorité des réactions chimique. On obtient : 
+$$dH = \sum d_{n_{A_i}}.h{A_i}(T,P) + \sum_j dn_{B_j}.h_{B_j}(T,P)$$
+De plus, d'apres la définition de $\varepsilon$ : 
+$$d\varepsilon = \dfrac{-dn_{A_i}}{\alpha_i} = \dfrac{dn_{B_i}}{\beta_i}$$
+On obtient donc : 
+$$dH = (\sum_j \beta_j.h_{B_j}(T,P) - \sum_i \alpha_i.h_{A_i}(T,P)).d\varepsilon$$
+\end{prop}
+\subsection{Enthalpie standard de réaction}
+\begin{de}
+On défini l'enthalpie de réaction, par :
+$$\Delta^r H(T,P) = \sum_j \beta_j.h_{B_j}(T,P) - \sum_i \alpha_i.h_{A_i}(T,P)$$
+\end{de}
+\begin{prop}
+Au cours d'une transformation monotherme et monobar, on obtient donc : 
+$$dH = \Delta^r H(T,P).d\varepsilon$$
+Cette enthalpie standard de réaction correspond à la variation d'enthalpie dans la réaction avec l'état initiale (T,P,juste les réactifs) et l'état finale (T,P,juste les produits).
+\end{prop}
+\begin{de}
+On défini l'enthalpie standard de réaction par :
+$$\Delta H^{r,0} = \Delta^r H(T_0,P_0)$$
+Avec $T_0 = 25°C$ et $P_0 = 1 bar$
+\end{de}
+\subsection{Relation de Kirchoff}
+\begin{enon}
+La relation de Kirchoff permet de déterminer l'enthalpie de réaction à partir de l'enthalpie standard de réaction. On obtient la relation suivante : 
+\begin{itemize}
+ \item[$\rightarrow$] Si il n'y a pas de changement d'etat entre $T_0$ et T : 
+$$\Delta^r H(T,P_0) = \Delta H^{r,0} + \int_{T_0}^T \Delta C_p(T)$$
+ \item[$\rightarrow$] Si il y a un changement d'état, par exemple en $T_1$, on obtient : 
+$$\Delta^r H(T,P_0) = \Delta H^{r,0} + \int_{T_0}^{T_1} \Delta C_p(T)_{Etat~ A}+ L + \int_{T_1}^T \Delta C_p(T)_{Etat~ B}$$
+\end{itemize}
+En général on peut fait une approximation en négligent les intégrales à chaque fois.
+\end{enon}
+\section{Enthalpie de formation d'un corps pur}
+\subsection{Détermination experimentale de $\Delta^r H$}
+On peut toujours, en décomposant les réactions, obtenir $\Delta^r H$. Ceci est permis car l'enthalpie est une fonction d'etat.
+\subsection{Enthalpie de formation}
+On défini l'enthalpie de formation comme l'enthalpie de réaction de la réaction suivante : 
+$$\mbox{ Corps pur simple dans leur état stable a }T_0,P_0 \rightarrow \mbox{ Corps unique }$$
+De cette définition, on en déduit que l'enthalipe de formation d'un corps pur simple est nulle.
+\section{Énergie interne de réaction}
+\begin{de}
+Dans le cas d'une transformation isochore, on as : 
+$$dU = \Delta^r u(T,V).d\varepsilon$$
+Avec : 
+$$\Delta^r u(T,V) = \Delta^r H - \Delta(PV)$$
+On fait l'hypothèse que les phases condensé sont incompression. On néglige donc $\Delta(PV)$.\\
+Dans le cas des gazs parfaits : 
+$$PV = n.R.T \Rightarrow \Delta(PV) = R.T.(\sum_j B_{j,gaz} - \sum_i A_{i,gaz})$$
+En connaisant l'enthalpie de réaction, on connait l'énergie interne de réaction.
+\end{de}
+\section{Entropie standard de réaction}
+Dans ce cas, nous avons uniquement une définition formel ! Elle n'a aucune réalité physique. Car lors du mélange, l'entropie ne se conserve pas.\\
+On a : 
+$$\Delta^r S(T,P) =  \sum_j \beta_{j}.s_{B_j}(T,P) - \sum_i \alpha_i.s{A_i}(T,P)$$
+Mais c'est tout !!! Nous n'avons pas les relations vu dans les autres chapitre, car l'entropie ne se conserve pas lors du mélange.
+\subsection{Entropie absolue}
+Contrairement au autre grandeur vu précédement, l'entropie n'est pas défini à une constante près. On défini donc l'entropie absolue : 
+$$\Delta^r S(T_0,P_0) =  \sum_j \beta_{j}.s_{B_j}(T_0,P_0) - \sum_i \alpha_i.s{A_i}(T_0,P_0)$$
+On ne considère pas de mélange, on considere les corps non mélangé. On obtient la meme relation pour obtenir l'entropie standard de réaction à l'aide de l'entrope absolue, sauf que les approximations précédente ne sont plus vérifié. Encore une fois, cette définition est purment formel. Elle n'a pas de réalité phyisique.

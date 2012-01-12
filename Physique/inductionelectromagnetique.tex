@@ -1,0 +1,60 @@
+
+\chapter{Induction Electromagnétique}
+\section{Loi de Faraday}
+\subsection{Expression de Faraday}
+Pour Faraday, une modification de la disposition des lignes de champs induit un courant
+\subsection{Déplacement d'un élément de circuit dans un champs permanent}
+Considérons un conducteur. Sous l'action d'un champs magnétique $\overrightarrow{B}$, le conducteur se déplace.\\ Ceci donne donc à tous points du circuit une vitesse. Tous ces point sont donc soumis à la force de Lorentz magnétique : 
+$$\overrightarrow{f} = q.\overrightarrow{v}\wedge\overrightarrow{B}$$
+Il se peut que cette force admette une composante sur son axe, ceci entraine donc un déplacement de charge, donc création d'un courant.\\
+On introduit le champs électromoteur de Newman : 
+$$\overrightarrow{E_{m}} = \overrightarrow{v_e}\wedge\overrightarrow{B}$$
+Avec $\overrightarrow{v_e}$ la vitesse d'entrainement des charges, qui à priori est différente de $\overrightarrow{v}$.\\
+On peut donc introduire une force électromotrice : 
+$$e = \oint \overrightarrow{E_m}.\overrightarrow{dl} = V_1-V_2$$
+On obtient, en considérant un élément de circuit qui se déplace, que : 
+$$e = -\dfrac{d\Phi_c}{dt}$$
+Avec $\Phi_c$ le flux coupé de $\overrightarrow{B}$
+\subsection{Enoncé}
+\subsubsection{Généralisation}
+Il apparait un courant induit dès qu'il y a une variation du flux coupé de $\overrightarrow{B}$
+\subsubsection{Loi de Faraday}
+La loi de Faraday dit que : 
+$$e = -\dfrac{d\Phi}{dt}$$
+Avec $\Phi$ le flux propre de $\overrightarrow{B}$
+\begin{prop}
+Si e > 0, alors le courant induit i > 0 (Dans le sens défini arbitrairement positif)
+\end{prop}
+\subsubsection{Loi de Lentz}
+\begin{enon}
+Le courant indu s'oppose à sa cause
+\end{enon}
+\subsubsection{Forme locale de la loi de Faraday}
+En partant de l'expression de e donnée par la loi de Faraday, en utilisant le fait que : 
+$$e = \oint \overrightarrow{E}.\overrightarrow{dl}$$
+Et en utilisant le théorème de Stokes, on obtient la forme locale du théorème de Gauss :
+$$\overrightarrow{rot}(\overrightarrow{E}) = \dfrac{-\delta\overrightarrow{B}}{\partial t}$$
+\subsubsection{Expression du champs}
+En partant de la forme locale du théorème de Gauss, on obtient que :
+$$\overrightarrow{E} = \dfrac{-\partial \overrightarrow{A}}{\partial t} - \overrightarrow{grad}(V)$$
+On peut mettre ceci sous la forme : 
+$$\overrightarrow{E} = \overrightarrow{E_m} + \overrightarrow{E_{c}}$$
+Avec $\overrightarrow{E_m}$ le champs de Newman, qui provient de la variation du champs magnétique, et $\overrightarrow{E_c}$ le champs électrostatique du aux charges présente.
+\subsection{Quantité d'électricité induit}
+En partant de l'expression de e donnée par la loi de Faraday, on obtient que :
+$$q = \dfrac{\Phi(t_1)-\Phi(t_2)}{R}$$
+On observe donc que la variation de charge est indépendente du temps, donc de la vitesse. Elle ne dépend que du point de départ et du point d'arrivé.
+\section{Induction mutuelle de deux circuits}
+\subsection{Coefficient d'induction mutuelle}
+\begin{enon}
+Considérons deux circuits. En exprimant le flux crée par le premièr circuit sur le second, on obtient que : 
+$$\Phi_{1 \rightarrow 2 } = M_{1\rightarrow 2}.i_1$$
+$M_{1\rightarrow2}$ est appelé coefficient d'induction mutuelle. On montre que : 
+$$M_{1\rightarrow 2} = M_{2 \rightarrow 1}$$
+\end{enon}
+\subsection{Auto-induction}
+Considérons le flux propre du circuit 1 par rapport au champs crée par 1 : 
+$$\Phi = \iint \overrightarrow{b}.\overrightarrow{n}.dS$$
+On obtient que :
+$$\Phi = L.i$$
+L est appelé coefficiant d'auto induction. Pour détérminer L, on doit connaitre le champs crée en tout point.

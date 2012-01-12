@@ -1,0 +1,92 @@
+\documentclass[a4paper,12 pt,oneside]{report}     % Type de document
+\usepackage[utf8x]{inputenc}			  % Utilisation du UTF8
+\usepackage{textcomp}				  % Accents dans les titres
+\usepackage [ french ] {babel}                    % Titres en français
+\usepackage [T1] {fontenc} 			  % Correspondance clavier -> document
+\usepackage[Lenny]{fncychap}                      % Beau Chapitre
+\usepackage{dsfont}                    	  % Pour afficher N,Z,D,Q,R,C
+\usepackage{fancyhdr}                             % Entete et pied de pages
+\usepackage [outerbars] {changebar}               % Positionnement barre en marge externe
+\usepackage{amsmath}				  % Utilisation de la librairie de Maths
+\usepackage{amssymb}				  % Utilisation des polices de Maths
+\usepackage{cite}                                 % Citations de la bibliographie
+\usepackage{openbib}                              % Gestion avancée de Bibtex
+\usepackage{enumerate}				  % Permet d'utiliser la fonction énumerate
+\usepackage{dsfont}				  % Utilisation des polices Dsfont
+\usepackage{ae}					  % Rend le PDF plus lisible
+\usepackage[pdftex]{graphicx}
+\usepackage{graphics}
+\usepackage[thinlines,thiklines]{easybmat}
+\usepackage{blkarray}
+\newcommand{\diag}{\mathrm{diag}} % matrice diagonale
+\newtheorem{de}{Définition}
+\newtheorem{theo}{Théorème}
+\newtheorem{enon}{Énoncé}
+\newtheorem{prop}{Propriété}
+\newtheorem{gene}{Généralisation}
+\newcommand{\mesbloc}[1]{\begin{array}{|c|} \hline #1 \\ \hline \end{array}}
+\makeatletter
+\newlength\BA@height
+\def\BA@leftdel#1#2#3{%
+  \setlength\BA@height{\dimen\z@}%
+  \addtolength\BA@height{5pt}%
+  \llap{%
+    {#1}$\left#2\vrule height \BA@height width\z@ \right.$\kern-#3}}
+
+\def\BA@rightdel#1#2#3{%
+  \setlength\BA@height{\dimen\z@}%
+  \addtolength\BA@height{5pt}%
+  \rlap{%
+    \kern-#3$\left.\vrule height \BA@height width\z@ \right#1${#2}}}%
+\makeatother
+
+%opening
+\title{Diagramme potentiel-pH}
+\author{MP}
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter{Rappels}
+\section{Diagramme de prédominance Acide-Base}
+\subsection{Définitions de Bronsted}
+Les définitions d'après Bronsted sont : 
+\begin{itemize}
+ \item[$\rightarrow$] Acide : Une entité capable de céder un ou plusieurs protons
+ \item[$\rightarrow$] Base : Une entité capable de capter un ou plusieurs protons
+\end{itemize}
+\subsection{Équation de définition}
+On définit le couple acide-base (AH,$A^-$) par l'équation : 
+AH + $H_2O \rightleftarrows A^- + H_30^+$
+\subsection{Constante d'acidité}
+La constante d'acidité, noté $K_A$, associé à un couple (AH,$A^-$), est défini comme la constante de réaction de l'équation de définition. D'où : 
+$$K_A = \dfrac{[A^-].[H_30^+]}{[AH]}$$
+\subsection{Diagramme de prédominance}
+D'après la constante d'acidité, on peut définir un diagramme de prédominance, en remarquant que l'on peut écrire cette constante sous la forme : 
+$$log(\dfrac{[A^-]}{[AH]}) = pH - pKa$$
+\section{Diagramme de prédominance d'un complexe}
+\subsection{Forme générale}
+On définit une réaction de complexation par : 
+$$M^+ + n.L \rightarrow ML_n^+$$
+On peut définir des constantes de dissosiation successive par : 
+$$Kd_n = \dfrac{[ML_{n-1}^+].[L]}{[ML_n^+]}$$
+A partir de ces constantes, on peut définir une diagramme de prédominance, avec les Kd1,Kd2,...,Kdn.
+\section{Diagramme d'existence d'un précipité}
+On définit la réaction de référence comme la réaction de dissolution du précipité. On l'écrit par exemple sous la forme : 
+$$\underset{\rightharpoondown}Fe(OH)_2 \rightarrow Fe^{2+} + 2.OH^{-}$$
+On définit donc ici la constante de dissolution, noté $K_s$, par : 
+$$K_s = [Fe^{2+}].[OH^-]^2$$
+On ne peut définir cette constante qu'à l'équilibre, donc en présence du précipité. A partir de cette constante, on peut définir un diagramme de prédominance en fonction du pH.
+\section{Couple oxydant-réducteur}
+\subsection{Nombre d'oxydation}
+En étudiant le nombre d'oxydation, on peut savoir quelle entité est l'oxydant, laquelle est le réducteur, à l'aide de la règle suivante : 
+\begin{itemize}
+ \item[$\rightarrow$] L'oxydant a le nombre d'oxydation le plus grand
+ \item[$\rightarrow$] Le réducteur a le nombre d'oxydation le plus faible
+\end{itemize}
+\subsection{Domaine d'un oxydant (ou d'un réducteur)}
+A l'aide de la formule de Nernst, on peut obtenir un diagramme de prédominance. Si le groupe réducteur, ou le groupe oxydant, n'est composé que de solide, alors on établit le diagramme de prédominance en utilisant une concentration de référence par exemple.
+\chapter{Diagramme potentiel-pH de l'eau}
+\section{L'eau est un oxydant}
+En considérant l'eau comme un oxydant, on montre que l'eau est stable pour une certaine zone 
+
+\end{document}

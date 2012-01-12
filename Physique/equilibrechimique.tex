@@ -1,0 +1,114 @@
+
+\chapter{Equilibre chimique}
+
+\section{Affinité chimique}
+\subsection{Variation de l'enthalpie libre au cours d'une réaction monobar et monotherme}
+Considérons le système suivant : 
+$$\alpha_i.A_i + \alpha_2.A_2  ... \rightleftarrows \beta_1.B_1 + \beta_2.B_2 .....$$
+On obtient :
+$$dG = VdP-SdT + \sum_i \mu_i.dn_i$$
+D'ou ici, considérant que cette réaction est monobar et monotherme :
+$$dG = [\sum_j \beta_j.\mu_{B_j} - \sum_i \alpha_i \mu_{A_i}].d\varepsilon$$
+Avec $d\varepsilon$ l'avancement.
+\subsection{Définition}
+\begin{de}
+On défini l'affinité chimique, notée A, défini dans le cas d'une transformation monotherme et monobar de la façon suivante : 
+$$dG = -A.d\varepsilon$$
+L'unité de A est le Joules.$moles^{-1}$.\\
+En considérant l'énergie interne et sa relation avec l'enthalpie libre, on considérant que les seules forces sont des forces de pression, on obtient : 
+$$\dfrac{A.d\varepsilon}{T} > 0 = \mbox{ Entropie crée}$$
+On en déduit donc que A et $d\varepsilon$ sont toujours de meme signe.
+\end{de}
+\subsection{Prévision de l'évolution de la réaction}
+Considérons une transformation monobar, monotherme, donc les seuls forces sont des forces de pressions. Nous avons le principe d'évolution suivant : 
+$$\Delta G \leq 0$$
+L'enthalpie libre évolue toujours vers un minimum.\\
+Si la réaction est quantitative, la fonction G=f($\varepsilon$) est décroissante jusqu'a atteint son minimum pour $\varepsilon_{max}$.\\
+Si la réaction admet un état d'équilibre, la fonction décroissant jusqu'a un maximum, pour le $\varepsilon_{eq}$ et croit jusqu'a $\varepsilon_{max}$.\\
+Nous avons donc un principe d'évolution à l'aide de l'affinité chimique :\\
+\begin{itemize}
+ \item[$\rightarrow$] Si A > 0, alors $d\varepsilon > 0$, la réaction se produit donc dans le sens direct
+ \item[$\rightarrow$] Si A < 0, alors $d\varepsilon < 0$, la réaction se produit donc dans le sens indirect
+\end{itemize}
+\subsection{Expression de A}
+L'expression de l'affinité de A est :
+$$A = \sum_i \alpha_i.\mu_{A_i} - \sum_j \beta_j.\mu_{B_j}$$
+En considérant des solutions idéale et des gaz parfaits, on obtient, en partant de l'expression des potentiels, et sachant que :
+$$G \sum n.\mu$$
+On obtient :
+$$A = - \Delta^r G(T,P) -RTln(Q)$$
+Avec Q le quotient de réaction, défini par : 
+$$Q = \dfrac{\prod_j a_{B_j}^{\beta_j}}{\prod_i a_{A_i}^{\alpha_i}}$$
+Ce quotient est défini $\forall \varepsilon$.
+\subsection{Relation de Gulberg et Waages}
+\subsubsection{Condition d'équilibre}
+A l'équilibre, on a : 
+$$A = 0$$
+On obtient donc que : 
+$$ln(Q) = \dfrac{-\Delta^r G(T,P)}{R.T}$$
+Si on fixe la pression et la température, le quotient de réaction est totalement défini à l'équilibre. On le note K(T).\\
+D'ou à l'équilibre : 
+$$Q = K(T) = e^{-\frac{\Delta^r G(T,P)}{R.T}}$$
+\section{Déplacement de l'équilibre}
+\subsection{Influence d'une variation de température}
+\subsubsection{Loi de Van't Hoff}
+Nous avons par définition : 
+$$A = -\Delta^r G(T,P) - R.T.ln(Q)$$
+Soit $T_1$ la température d'équilibre. On a donc : 
+$$ln(Q) = \dfrac{-\Delta^r G(T,P)}{R.T}$$
+On introduit une petite variation de température : 
+$$T = T_1 + \nu,~ \nu\ll T_1$$
+D'après la relation de Gibbs-Helmotz, qui dit que : 
+$$\dfrac{\partial \dfrac{G}{T}}{\partial T} = \dfrac{-H}{T^2}$$
+On obtient que :
+$$\dfrac{\partial Ln(K)}{\partial T} = \dfrac{\Delta^r H}{R.T^2}$$
+Ceci constitue la loi de Van't Hoff.\\
+Donc, si $\Delta^r H > 0,~ A>0$, la réaction à lieu dans le sens direct.
+\subsubsection{Principe de modération}
+Si on éleve la température, l'équilibre se déplace dans le sens de la réaction endothermique, qui consomme de l'énergie.\\
+En d'autre terme, si on apporte de l'énergie à un système, celui ci réagit en s'opposant à cette énergie en quelque sorte, en consommant une partie de cette énergie.
+\subsection{Influence d'une variation de pression}
+Une élévation de pression déplace l'équilibre dans le sens de la diminution du nombre mole. Ceci consititue encore un principe de modération
+\subsection{Influence de l'ajout d'un constituant}
+\subsubsection{A volume constant}
+A température constante et à volume constant, l'ajout d'un réactif déplace l'équilibre de la réaction dans le sens de la consommation du réactif
+\subsubsection{A pression constant, gaz inerte}
+A pression constante, l'ajout d'un gaz inerte déplace l'équilibre quand le sens qui augmente le nombre de mole de gaz 
+\subsubsection{A pression constant, ajout d'un reactif}
+Si on ajoute un réactif à pression constante, il y a plusieurs cas de figure :
+\begin{itemize}
+ \item[$\rightarrow$] L'équilibre peut se déplacer dans le sens de la consommation des réactifs
+ \item[$\rightarrow$] Mais il peut aussi se déplacer dans le sens de la production des réactifs, dans le sens indirect donc.
+\end{itemize}
+\section{Potentiel d'oxydo-réduction}
+\subsection{Force électromotrice d'une pile}
+Considérons une pile, consititué d'un circuit exterieur et deux becher, constitué respectivement de ($Ox_1,Red_1$) et ($Ox_2,Red_2$). La pile est en convention générateur, et le circuit en convention récepteur.\\
+Considérons un avancement $d\varepsilon$. Pour cette avancement, nous observons le déplacement de la charge dq dans le circuit : 
+$$dq=n.m.N_a.e.d\varepsilon$$
+On obtient donc l'expression de la puissance et du travail reçu par le circuit :
+$$P_{elec} = i.(-u) = -u.\dfrac{dq}{dt}$$
+$$W_{elec} = -U.n.m.N_a.e.d\varepsilon$$
+On voit donc que la réaction est controlé par le circuit exterieur.\\
+On peut donc se placer dans un cas réversible, en placant un GBF de force électromotrice E dans le circuit externe.\\
+Considérons une transformation réversible, monotherme et monobare. On obtient donc : 
+$$dG = W_{elec}$$
+Avec G l'enthalpie libre. D'ou : 
+$$-Ad\varepsilon = -n.m.N_a.e.E.d\varepsilon$$
+D'ou :
+$$A = n.m.N_a.e.E$$
+On peut donc relier l'avancement de la réaction à E.
+\subsection{Relation de Nernst}
+En partant de l'expression précédente, et en développent l'expression de l'affinité chimique, on obtient que :
+$$\prod_{ox/red} = \prod ^0+\dfrac{R.T}{n.N_a.e}.ln(10).log(\dfrac{a(ox)}{a(red)})$$
+Avec $\prod$ le potentiel du groupe ox/red, $\prod^0$ le potentiel standard du groupe ox/red, et a(X) l'activité de X.\\
+Pout T = 25°C, on obtient : 
+$$\dfrac{R.T}{N_a.e}.ln(10) = 0.06$$
+On obtient donc la formule de Nernst : 
+$$\prod_{ox/red} = \prod^0+\dfrac{0.06}{n}.log\left(\dfrac{a(ox)}{a(red)}\right)$$
+Mais c'est formule n'est valable qu'a 25°C, a cause du 0.06.
+\section{Variance}
+\begin{de}
+On considère une système chimique à l'équilibre (il y a donc coexistance des réactifs et des produits).\\
+On appelle variance le nombre de paramètre intensif que l'on peut fixer arbitrairement sans rompre l'équilibre.
+\end{de}
+
